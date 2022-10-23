@@ -13,13 +13,12 @@ type PhotosContent struct {
 }
 
 func (pc *PhotosContent) Render() app.UI {
-	app.Log("rendering photos")
 	photoList := ApplicationData().Photos
 	userData := ApplicationData().UserData
 	return app.Div().Body(
 		app.Range(photoList).Slice(func(i int) app.UI {
 			var photo = photoList[i]
-			return renderPhoto(photoList[i], userData.HasPhoto(photo.ID))
+			return renderPhoto(photo, userData.HasPhoto(photo.ID))
 		}),
 	)
 }

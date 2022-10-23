@@ -55,15 +55,10 @@ func (ud *UserData) ToggleInvention(inventionID string) {
 
 /* Local Storage Handlers */
 func (ud *UserData) save() {
-	app.Log("saving user data...")
-	app.Log(ud)
-	app.Log(*ud)
 	var data, err = json.Marshal(*ud)
 	if err != nil {
 		app.Log(err)
 	}
-	app.Log("DATA: ")
-	app.Log(string(data))
 	var localStorage = (*ud.context).LocalStorage()
 	err = localStorage.Set(LOCAL_STORAGE_KEY, string(data))
 	if err != nil {
@@ -78,11 +73,7 @@ func FetchUserData(ctx *app.Context) *UserData {
 	}
 	var data string
 	(*ctx).LocalStorage().Get(LOCAL_STORAGE_KEY, &data)
-	app.Log("local storage data")
-	app.Log(data)
 	json.Unmarshal([]byte(data), userData)
-	app.Log("loaded user data")
-	app.Log(userData)
 	userData.context = ctx
 	return userData
 }

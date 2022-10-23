@@ -45,5 +45,6 @@ func renderInvention(inv Invention, hasInv bool) app.UI {
 func renderInventionPhoto(p *Photo) app.UI {
 	return app.A().Body(
 		app.Text(p.Name),
+		app.Br(),
 	).Href("/photos#" + p.ID)
 }

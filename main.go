@@ -6,6 +6,7 @@ import (
 
 	. "github.com/liqMix/DC2Photobook/internal/components"
 	"github.com/liqMix/DC2Photobook/internal/data"
+	"github.com/liqMix/DC2Photobook/internal/utils"
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 	"github.com/maxence-charriere/go-app/v9/pkg/ui"
 )
@@ -15,27 +16,24 @@ const stylePrefix string = "goapp-"
 type Application struct {
 	app.Compo
 
+	path    *utils.Path
 	Menu    MainMenu
 	Submenu Submenu
 	Content Content
 }
 
 func (a *Application) OnNav(ctx app.Context) {
+	a.path = utils.GetPath()
 	a.Submenu.HandleNavChange()
-	a.Content.HandleNavChange()
 }
 
 func (a *Application) OnMount(ctx app.Context) {
 	data.InitAppData(&ctx)
-	hashPath := app.Window().URL().Fragment
-	app.Log("on mount app ", hashPath)
-	if hashPath != "" {
-		ctx.ScrollTo(hashPath)
-	}
+	a.path = utils.GetPath()
 }
 
 func (a *Application) Render() app.UI {
-	value := ui.Shell().
+	return ui.Shell().
 		Class(stylePrefix+"app-info background").
 		Menu(
 			a.Menu.Render(),
@@ -47,7 +45,6 @@ func (a *Application) Render() app.UI {
 			app.Div().Class(stylePrefix+"stack header"),
 			a.Content.Render(),
 		)
-	return value
 }
 
 func main() {

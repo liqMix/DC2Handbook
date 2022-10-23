@@ -1,9 +1,8 @@
 package components
 
 import (
-	"strings"
-
 	. "github.com/liqMix/DC2Photobook/internal/data"
+	"github.com/liqMix/DC2Photobook/internal/utils"
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 )
 
@@ -11,30 +10,18 @@ type Submenu struct {
 	app.Compo
 
 	selected     string
-	rootPath     string
 	sorter       Sorter
 	subMenuItems []LinkItem
 }
 
 func (s *Submenu) HandleNavChange() {
-	path := app.Window().URL().Path
-	path = strings.Replace(path, "/", "", 1)
 	var subMenuItems []LinkItem
-	if s.rootPath != path {
-		s.rootPath = path
-		s.selected = ""
-	}
-	// var paths = strings.Split(path, "/")
-	// if s.rootPath != paths[1] {
-	// 	s.rootPath = paths[1]
-	// 	s.selected = ""
-	// }
-
-	switch s.rootPath {
+	path := utils.GetPath()
+	switch path.Root {
 	case "config":
 		configItems := [][]string{{"test", "test"}}
 		for _, v := range configItems {
-			subMenuItems = append(subMenuItems, LinkItemFromStrings(v[0], v[1], s.rootPath))
+			subMenuItems = append(subMenuItems, LinkItemFromStrings(v[0], v[1], path.Root))
 		}
 	case "items":
 		items := ApplicationData().Items
