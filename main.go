@@ -4,56 +4,74 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/maxence-charriere/go-app/v8/pkg/app"
+	. "github.com/liqMix/DC2Photobook/internal/components"
+	"github.com/liqMix/DC2Photobook/internal/data"
+	"github.com/maxence-charriere/go-app/v9/pkg/app"
+	"github.com/maxence-charriere/go-app/v9/pkg/ui"
 )
 
-// hello is a component that displays a simple "Hello World!". A component is a
-// customizable, independent, and reusable UI element. It is created by
-// embedding app.Compo into a struct.
-type hello struct {
+const stylePrefix string = "goapp-"
+
+type Application struct {
 	app.Compo
+
+	Menu    MainMenu
+	Submenu Submenu
+	Content Content
 }
 
-// The Render method is where the component appearance is defined. Here, a
-// "Hello World!" is displayed as a heading.
-func (h *hello) Render() app.UI {
-	return app.H1().Text("Hello World!")
+func (a *Application) OnNav(ctx app.Context) {
+	a.Submenu.HandleNavChange()
+	a.Content.HandleNavChange()
 }
 
-// The main function is the entry point where the app is configured and started.
-// It is executed in 2 different environments: A client (the web browser) and a
-// server.
+func (a *Application) OnMount(ctx app.Context) {
+	data.InitAppData(&ctx)
+	hashPath := app.Window().URL().Fragment
+	app.Log("on mount app ", hashPath)
+	if hashPath != "" {
+		ctx.ScrollTo(hashPath)
+	}
+}
+
+func (a *Application) Render() app.UI {
+	value := ui.Shell().
+		Class(stylePrefix+"app-info background").
+		Menu(
+			a.Menu.Render(),
+		).
+		Index(
+			a.Submenu.Render(),
+		).
+		Content(
+			app.Div().Class(stylePrefix+"stack header"),
+			a.Content.Render(),
+		)
+	return value
+}
+
 func main() {
-	// The first thing to do is to associate the hello component with a path.
-	//
-	// This is done by calling the Route() function,  which tells go-app what
-	// component to display for a given path, on both client and server-side.
-	app.Route("/", &hello{})
+	// Route all pages to Application
+	app.RouteWithRegexp("/*", &Application{})
 
-	// Once the routes set up, the next thing to do is to either launch the app
-	// or the server that serves the app.
-	//
-	// When executed on the client-side, the RunWhenOnBrowser() function
-	// launches the app,  starting a loop that listens for app events and
-	// executes client instructions. Since it is a blocking call, the code below
-	// it will never be executed.
-	//
-	// On the server-side, RunWhenOnBrowser() does nothing, which allows the
-	// writing of server logic without needing precompiling instructions.
+	// app.RouteWithRegexp("/items*", &Content{})
+
 	app.RunWhenOnBrowser()
 
-	// Finally, launching the server that serves the app is done by using the Go
-	// standard HTTP package.
-	//
-	// The Handler is an HTTP handler that serves the client and all its
-	// required resources to make it work into a web browser. Here it is
-	// configured to handle requests with a path that starts with "/".
 	http.Handle("/", &app.Handler{
-		Name:        "Hello",
-		Description: "An Hello World! example",
+		Name:        "DC2 Handbook",
+		Title:       "DC2 Handbook",
+		Description: "A tool for managing Dark Cloud 2 photos and recipes",
+		Icon: app.Icon{
+			Default: "/web/img/logo.png",
+		},
+		Styles: []string{
+			"/web/css/docs.css",
+			"/web/css/app.css",
+		},
 	})
 
-	if err := http.ListenAndServe(":8000", nil); err != nil {
+	if err := http.ListenAndServe(":9001", nil); err != nil {
 		log.Fatal(err)
 	}
 }

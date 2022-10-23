@@ -5,6 +5,9 @@
 *.so
 *.dylib
 
+# User bat files
+*.bat
+
 # Test binary, built with `go test -c`
 *.test
 
@@ -13,6 +16,13 @@
 
 # Web Build
 web/
+
+# WIP & Scripts Folder
+wip/
+scripts/
+
+# Main entry
+DC2Photobook
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
