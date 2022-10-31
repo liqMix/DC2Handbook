@@ -6,12 +6,12 @@ import (
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 )
 
-type ItemsContent struct {
+type Items struct {
 	app.Compo
 }
 
-func (pc *ItemsContent) Render() app.UI {
-	itemList := ApplicationData().Items
+func (pc *Items) Render() app.UI {
+	itemList := GetAppData().Items
 	return app.Div().Body(
 		app.Range(itemList).Slice(func(i int) app.UI {
 			return renderItem(itemList[i])

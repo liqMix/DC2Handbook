@@ -3,6 +3,7 @@ package data
 import (
 	"encoding/json"
 
+	"github.com/liqMix/DC2Photobook/internal/types"
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 )
 
@@ -12,10 +13,42 @@ type UserData struct {
 	context    *app.Context    `json:"-"`
 	Photos     map[string]bool `json:"photos"`
 	Inventions map[string]bool `json:"inventions"`
-	Chapter    uint8           `json:"chapter"`
+	Chapter    string          `json:"chapter"`
+}
+
+var userData *UserData = &UserData{}
+
+func GetUserData() *UserData {
+	return userData
+}
+
+func InitUserData(ctx *app.Context) {
+	userData = fetchUserData(ctx)
+}
+
+/* Chapter */
+func (ud *UserData) SetChapter(chapter string) {
+	ud.Chapter = chapter
+	ud.save()
 }
 
 /* Photos */
+func (ud *UserData) GetPhotoStatus(photo *types.Photo) types.PhotoStatus {
+	if ud.HasPhoto(photo.ID) {
+		return types.TAKEN
+	}
+	if ud.Chapter > photo.Chapter && photo.Missable {
+		return types.MISSED
+	}
+	if ud.Chapter < photo.Chapter {
+		return types.UPCOMING
+	}
+	if ud.Chapter == photo.Chapter {
+		return types.NEW
+	}
+	return types.AVAILABLE
+}
+
 func (ud *UserData) HasPhoto(photoID string) bool {
 	var current, ok = ud.Photos[photoID]
 	if !ok {
@@ -24,6 +57,7 @@ func (ud *UserData) HasPhoto(photoID string) bool {
 		return current
 	}
 }
+
 func (ud *UserData) TogglePhoto(photoID string) {
 	var current, ok = ud.Photos[photoID]
 	if !ok {
@@ -66,7 +100,7 @@ func (ud *UserData) save() {
 	}
 }
 
-func FetchUserData(ctx *app.Context) *UserData {
+func fetchUserData(ctx *app.Context) *UserData {
 	var userData = &UserData{
 		Photos:     make(map[string]bool),
 		Inventions: make(map[string]bool),

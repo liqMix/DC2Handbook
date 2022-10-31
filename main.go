@@ -16,6 +16,7 @@ const stylePrefix string = "goapp-"
 type Application struct {
 	app.Compo
 
+	loaded  bool
 	path    *utils.Path
 	Menu    MainMenu
 	Submenu Submenu
@@ -28,13 +29,23 @@ func (a *Application) OnNav(ctx app.Context) {
 }
 
 func (a *Application) OnMount(ctx app.Context) {
+	ctx.SetState("loaded", false)
 	data.InitAppData(&ctx)
+	data.InitUserData(&ctx)
 	a.path = utils.GetPath()
+	ctx.ObserveState("loaded").
+		While(func() bool {
+			return !a.loaded
+		}).
+		OnChange(func() {
+			a.loaded = data.GetAppData() != nil
+		}).
+		Value(&a.loaded)
 }
 
 func (a *Application) Render() app.UI {
 	return ui.Shell().
-		Class(stylePrefix+"app-info background").
+		Class(stylePrefix + "app-info background").
 		Menu(
 			a.Menu.Render(),
 		).
@@ -42,8 +53,12 @@ func (a *Application) Render() app.UI {
 			a.Submenu.Render(),
 		).
 		Content(
-			app.Div().Class(stylePrefix+"stack header"),
-			a.Content.Render(),
+			app.If(!a.loaded,
+				ui.Loader().Loading(true),
+			).Else(
+				app.Div().Class(stylePrefix+"stack header"),
+				a.Content.Render(),
+			),
 		)
 }
 
@@ -64,7 +79,6 @@ func main() {
 		},
 		Styles: []string{
 			"/web/css/docs.css",
-			"/web/css/app.css",
 		},
 	})
 

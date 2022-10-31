@@ -1,16 +1,22 @@
 package types
 
 type RecipeItem struct {
-	Item *Item
+	Item  *Item
 	Count uint8
 }
 
 type Invention struct {
-	ID string
-	Name string
-	ImageURL string
-	Chapter uint8
+	Base
+	ImageURL    string
+	Chapter     uint8
 	Description string
-	Photos []*Photo
-	Recipe []RecipeItem
+	Photos      []*Photo
+	Recipe      []RecipeItem
+}
+
+func (i *Invention) ToLinkItem() *LinkItem {
+	return &LinkItem{
+		label: i.Name,
+		href:  "/inventions#" + i.ID,
+	}
 }

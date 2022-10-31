@@ -28,8 +28,8 @@ func (m *MainMenu) renderHomeOptions() app.UI {
 		app.A().Href("/about").Class("link heading fit").Body(
 			app.Text("About"),
 		),
-		app.A().Href("/config").Class("link heading fit").Body(
-			app.Text("Config"),
+		app.A().Href("/user").Class("link heading fit").Body(
+			app.Text("User"),
 		),
 	)
 }

@@ -2,6 +2,7 @@ package data
 
 import (
 	"encoding/json"
+	"errors"
 	"io"
 	"net/http"
 
@@ -10,14 +11,15 @@ import (
 )
 
 const DEFAULT_DATA_DIR = "/web/json/"
+const CHAPTERS_PATH = DEFAULT_DATA_DIR + "chapters.json"
 const ITEMS_PATH = DEFAULT_DATA_DIR + "items.json"
 const PHOTOS_PATH = DEFAULT_DATA_DIR + "photos.json"
 const INVENTIONS_PATH = DEFAULT_DATA_DIR + "inventions.json"
 
-var applicationData *AppData = &AppData{}
+var appData *AppData = nil
 
 type AppData struct {
-	UserData   *UserData
+	Chapters   []Chapter
 	Photos     []Photo
 	Inventions []Invention
 	Items      []Item
@@ -25,16 +27,27 @@ type AppData struct {
 	host string
 }
 
-func ApplicationData() *AppData {
-	return applicationData
+/* Init */
+func InitAppData(ctx *app.Context) {
+	appData = &AppData{}
+	appData.host = "http://" + app.Window().URL().Host
+	appData.initChapters()
+	appData.initItems()
+	appData.initPhotos()
+	appData.initInventions()
+	(*ctx).SetState("loaded", true)
 }
 
-func InitAppData(ctx *app.Context) {
-	applicationData.host = "http://" + app.Window().URL().Host
-	applicationData.initItems()
-	applicationData.initPhotos()
-	applicationData.initInventions()
-	applicationData.UserData = FetchUserData(ctx)
+func (ad *AppData) initChapters() {
+	resp, err := http.Get(ad.host + CHAPTERS_PATH)
+	if err != nil {
+		app.Log(err)
+		return
+	}
+
+	defer resp.Body.Close()
+	body, _ := io.ReadAll(resp.Body)
+	json.Unmarshal(body, &ad.Chapters)
 }
 
 func (ad *AppData) initItems() {
@@ -71,4 +84,19 @@ func (ad *AppData) initInventions() {
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 	json.Unmarshal(body, &ad.Inventions)
+}
+
+/* Get */
+func GetAppData() *AppData {
+	return appData
+}
+
+func GetChapter(chapterID string) (*Chapter, error) {
+	for _, v := range appData.Chapters {
+		app.Log(v)
+		if v.ID == chapterID {
+			return &v, nil
+		}
+	}
+	return &Chapter{}, errors.New("Chapter not found")
 }

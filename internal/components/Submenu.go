@@ -2,6 +2,7 @@ package components
 
 import (
 	. "github.com/liqMix/DC2Photobook/internal/data"
+	. "github.com/liqMix/DC2Photobook/internal/types"
 	"github.com/liqMix/DC2Photobook/internal/utils"
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 )
@@ -11,39 +12,39 @@ type Submenu struct {
 
 	selected     string
 	sorter       Sorter
-	subMenuItems []LinkItem
+	subMenuItems []*LinkItem
 }
 
 func (s *Submenu) HandleNavChange() {
-	var subMenuItems []LinkItem
+	var subMenuItems []*LinkItem
 	path := utils.GetPath()
+	appData := GetAppData()
+	var list []IBase
 	switch path.Root {
-	case "config":
-		configItems := [][]string{{"test", "test"}}
-		for _, v := range configItems {
-			subMenuItems = append(subMenuItems, LinkItemFromStrings(v[0], v[1], path.Root))
-		}
-	case "items":
-		items := ApplicationData().Items
-		subMenuItems = make([]LinkItem, len(items))
-		for i, v := range items {
-			subMenuItems[i] = LinkItemFromItem(v, "")
-		}
 	case "photos":
-		items := ApplicationData().Photos
-		subMenuItems = make([]LinkItem, len(items))
-		for i, v := range items {
-			subMenuItems[i] = LinkItemFromPhoto(v, "")
+		list = make([]IBase, len(appData.Photos))
+		for i := range appData.Photos {
+			list[i] = &appData.Photos[i]
 		}
+
 	case "inventions":
-		items := ApplicationData().Inventions
-		subMenuItems = make([]LinkItem, len(items))
-		for i, v := range items {
-			subMenuItems[i] = LinkItemFromInvention(v, "")
+		list = make([]IBase, len(appData.Inventions))
+		for i := range appData.Inventions {
+			list[i] = &appData.Inventions[i]
 		}
+
+	case "items":
+		list = make([]IBase, len(appData.Items))
+		for i := range appData.Items {
+			list[i] = &appData.Items[i]
+		}
+
 	default:
 	}
-
+	subMenuItems = make([]*LinkItem, len(list))
+	for i, v := range list {
+		subMenuItems[i] = v.ToLinkItem()
+	}
 	s.subMenuItems = subMenuItems
 }
 
@@ -58,7 +59,7 @@ func (s *Submenu) renderMenuItems() app.UI {
 	return app.Dl().Body(
 		app.Range(s.subMenuItems).Slice(func(i int) app.UI {
 			className := ""
-			if s.subMenuItems[i].label == s.selected {
+			if s.subMenuItems[i].IsSelected(s.selected) {
 				className = "vignette"
 			}
 			return app.Dd().Class(className).Body(
@@ -68,9 +69,9 @@ func (s *Submenu) renderMenuItems() app.UI {
 	)
 }
 
-func (s *Submenu) selectSubMenuItem(item LinkItem) app.EventHandler {
+func (s *Submenu) selectSubMenuItem(item *LinkItem) app.EventHandler {
 	return func(ctx app.Context, e app.Event) {
-		s.selected = item.label
+		s.selected = item.GetLabel()
 	}
 }
 func (s *Submenu) renderMenuContainer() app.UI {

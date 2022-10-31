@@ -6,24 +6,23 @@ import (
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 )
 
-type InventionsContent struct {
+type Inventions struct {
 	app.Compo
 }
 
-func (ic *InventionsContent) Render() app.UI {
-	inventionList := ApplicationData().Inventions
-	userData := ApplicationData().UserData
+func (ic *Inventions) Render() app.UI {
+	inventionList := GetAppData().Inventions
 	return app.Div().Body(
 		app.Range(inventionList).Slice(func(i int) app.UI {
 			var inv = inventionList[i]
-			return renderInvention(inv, userData.HasInvention(inv.ID))
+			return renderInvention(inv, GetUserData().HasInvention(inv.ID))
 		}),
 	)
 }
 
 func ToggleHasInvention(iID string) app.EventHandler {
 	return func(ctx app.Context, e app.Event) {
-		ApplicationData().UserData.ToggleInvention(iID)
+		GetUserData().ToggleInvention(iID)
 	}
 }
 

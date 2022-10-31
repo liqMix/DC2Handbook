@@ -15,7 +15,7 @@
 *.out
 
 # Web Build
-web/
+web/*.wasm
 
 # WIP & Scripts Folder
 wip/
