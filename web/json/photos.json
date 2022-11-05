@@ -1,7 +1,7 @@
 [
   {
-    "id": "p183",
-    "name": "A Surviving Soldier (ghost)",
+    "id": "p152",
+    "name": "A Surviving Soldier",
     "chapter": "4",
     "missable": false,
     "missableNote": null,
@@ -11,7 +11,7 @@
     "image_url": null
   },
   {
-    "id": "p237",
+    "id": "p084",
     "name": "Air Cleaner",
     "chapter": "4",
     "missable": false,
@@ -22,7 +22,7 @@
     "image_url": null
   },
   {
-    "id": "p238",
+    "id": "p206",
     "name": "Alexandra's Bed",
     "chapter": "7",
     "missable": false,
@@ -33,7 +33,7 @@
     "image_url": null
   },
   {
-    "id": "p184",
+    "id": "p048",
     "name": "Ancient Mural",
     "chapter": "4",
     "missable": false,
@@ -44,7 +44,7 @@
     "image_url": null
   },
   {
-    "id": "p239",
+    "id": "p106",
     "name": "Auto Book Reader",
     "chapter": "1",
     "missable": false,
@@ -55,7 +55,7 @@
     "image_url": null
   },
   {
-    "id": "p240",
+    "id": "p207",
     "name": "Banana",
     "chapter": "4",
     "missable": false,
@@ -66,7 +66,7 @@
     "image_url": null
   },
   {
-    "id": "p241",
+    "id": "p208",
     "name": "Bar Sign",
     "chapter": "1",
     "missable": false,
@@ -77,7 +77,7 @@
     "image_url": null
   },
   {
-    "id": "p185",
+    "id": "p183",
     "name": "Baron's Hangin' On",
     "chapter": "1",
     "missable": false,
@@ -88,7 +88,7 @@
     "image_url": null
   },
   {
-    "id": "p242",
+    "id": "p081",
     "name": "Barrel",
     "chapter": "1",
     "missable": false,
@@ -99,7 +99,7 @@
     "image_url": null
   },
   {
-    "id": "p243",
+    "id": "p209",
     "name": "Basket Steamer",
     "chapter": "3",
     "missable": false,
@@ -110,7 +110,7 @@
     "image_url": null
   },
   {
-    "id": "p244",
+    "id": "p026",
     "name": "Bed",
     "chapter": "1",
     "missable": false,
@@ -121,7 +121,7 @@
     "image_url": null
   },
   {
-    "id": "p245",
+    "id": "p005",
     "name": "Belt",
     "chapter": "1",
     "missable": false,
@@ -132,7 +132,7 @@
     "image_url": null
   },
   {
-    "id": "p246",
+    "id": "p210",
     "name": "Bench",
     "chapter": "1",
     "missable": false,
@@ -143,7 +143,7 @@
     "image_url": null
   },
   {
-    "id": "p247",
+    "id": "p211",
     "name": "Binoculars",
     "chapter": "1",
     "missable": false,
@@ -154,7 +154,7 @@
     "image_url": null
   },
   {
-    "id": "p248",
+    "id": "p212",
     "name": "Blackstone One",
     "chapter": "1",
     "missable": true,
@@ -165,7 +165,7 @@
     "image_url": null
   },
   {
-    "id": "p249",
+    "id": "p129",
     "name": "Blue Lantern",
     "chapter": "7",
     "missable": false,
@@ -176,7 +176,7 @@
     "image_url": null
   },
   {
-    "id": "p250",
+    "id": "p179",
     "name": "Boat",
     "chapter": "1",
     "missable": false,
@@ -187,7 +187,7 @@
     "image_url": null
   },
   {
-    "id": "p186",
+    "id": "p184",
     "name": "Bomber Head Boom!",
     "chapter": "5",
     "missable": false,
@@ -198,7 +198,7 @@
     "image_url": null
   },
   {
-    "id": "p251",
+    "id": "p012",
     "name": "Bone",
     "chapter": "1",
     "missable": false,
@@ -209,7 +209,7 @@
     "image_url": null
   },
   {
-    "id": "p252",
+    "id": "p178",
     "name": "Book",
     "chapter": "1",
     "missable": false,
@@ -220,7 +220,7 @@
     "image_url": null
   },
   {
-    "id": "p253",
+    "id": "p028",
     "name": "Bottle",
     "chapter": "1",
     "missable": false,
@@ -231,7 +231,7 @@
     "image_url": null
   },
   {
-    "id": "p187",
+    "id": "p168",
     "name": "Brave Little Linda",
     "chapter": "1",
     "missable": true,
@@ -242,7 +242,7 @@
     "image_url": null
   },
   {
-    "id": "p254",
+    "id": "p213",
     "name": "Bread",
     "chapter": "1",
     "missable": false,
@@ -253,7 +253,7 @@
     "image_url": null
   },
   {
-    "id": "p255",
+    "id": "p214",
     "name": "Bridge",
     "chapter": "1",
     "missable": false,
@@ -264,7 +264,7 @@
     "image_url": null
   },
   {
-    "id": "p188",
+    "id": "p066",
     "name": "Burning Dragon Fire",
     "chapter": "3",
     "missable": false,
@@ -275,7 +275,7 @@
     "image_url": null
   },
   {
-    "id": "p256",
+    "id": "p044",
     "name": "Cafe Sign",
     "chapter": "1",
     "missable": false,
@@ -286,7 +286,7 @@
     "image_url": null
   },
   {
-    "id": "p257",
+    "id": "p215",
     "name": "Camellia Tree",
     "chapter": "7",
     "missable": false,
@@ -297,7 +297,7 @@
     "image_url": null
   },
   {
-    "id": "p258",
+    "id": "p086",
     "name": "Can",
     "chapter": "1",
     "missable": false,
@@ -308,7 +308,7 @@
     "image_url": null
   },
   {
-    "id": "p259",
+    "id": "p038",
     "name": "Candle",
     "chapter": "1",
     "missable": false,
@@ -319,7 +319,7 @@
     "image_url": null
   },
   {
-    "id": "p260",
+    "id": "p090",
     "name": "Car",
     "chapter": "1",
     "missable": false,
@@ -330,7 +330,7 @@
     "image_url": null
   },
   {
-    "id": "p261",
+    "id": "p096",
     "name": "Cart",
     "chapter": "1",
     "missable": false,
@@ -341,7 +341,7 @@
     "image_url": null
   },
   {
-    "id": "p262",
+    "id": "p153",
     "name": "Cedric's Shop Sign",
     "chapter": "1",
     "missable": false,
@@ -352,7 +352,7 @@
     "image_url": null
   },
   {
-    "id": "p263",
+    "id": "p008",
     "name": "Chair",
     "chapter": "1",
     "missable": false,
@@ -363,7 +363,7 @@
     "image_url": null
   },
   {
-    "id": "p264",
+    "id": "p216",
     "name": "Chandelier",
     "chapter": "1",
     "missable": false,
@@ -374,7 +374,7 @@
     "image_url": null
   },
   {
-    "id": "p189",
+    "id": "p185",
     "name": "Changing Dog Statue",
     "chapter": "3",
     "missable": false,
@@ -385,7 +385,7 @@
     "image_url": null
   },
   {
-    "id": "p190",
+    "id": "p181",
     "name": "Charging Ram",
     "chapter": "3",
     "missable": false,
@@ -396,7 +396,7 @@
     "image_url": null
   },
   {
-    "id": "p265",
+    "id": "p119",
     "name": "Chimney",
     "chapter": "1",
     "missable": false,
@@ -407,7 +407,7 @@
     "image_url": null
   },
   {
-    "id": "p266",
+    "id": "p076",
     "name": "Chinese Lantern",
     "chapter": "3",
     "missable": false,
@@ -418,7 +418,7 @@
     "image_url": null
   },
   {
-    "id": "p267",
+    "id": "p051",
     "name": "Cinders",
     "chapter": "5",
     "missable": true,
@@ -429,7 +429,7 @@
     "image_url": null
   },
   {
-    "id": "p268",
+    "id": "p032",
     "name": "Clock",
     "chapter": "1",
     "missable": false,
@@ -440,7 +440,7 @@
     "image_url": null
   },
   {
-    "id": "p269",
+    "id": "p000",
     "name": "Cloth",
     "chapter": "1",
     "missable": false,
@@ -451,7 +451,7 @@
     "image_url": null
   },
   {
-    "id": "p191",
+    "id": "p001",
     "name": "Clown Robo's Attack",
     "chapter": "1",
     "missable": true,
@@ -462,7 +462,7 @@
     "image_url": null
   },
   {
-    "id": "p270",
+    "id": "p055",
     "name": "Coal",
     "chapter": "2",
     "missable": true,
@@ -473,7 +473,7 @@
     "image_url": null
   },
   {
-    "id": "p271",
+    "id": "p163",
     "name": "Computer",
     "chapter": "5",
     "missable": false,
@@ -484,7 +484,7 @@
     "image_url": null
   },
   {
-    "id": "p272",
+    "id": "p021",
     "name": "Constructor",
     "chapter": "1",
     "missable": false,
@@ -495,7 +495,7 @@
     "image_url": null
   },
   {
-    "id": "p273",
+    "id": "p127",
     "name": "Crescent-Shaped Light",
     "chapter": "3",
     "missable": false,
@@ -506,7 +506,7 @@
     "image_url": null
   },
   {
-    "id": "p274",
+    "id": "p099",
     "name": "Cup",
     "chapter": "1",
     "missable": false,
@@ -517,7 +517,7 @@
     "image_url": null
   },
   {
-    "id": "p275",
+    "id": "p217",
     "name": "Curtain",
     "chapter": "1",
     "missable": false,
@@ -528,7 +528,7 @@
     "image_url": null
   },
   {
-    "id": "p192",
+    "id": "p186",
     "name": "Dangerous Pumpkin",
     "chapter": "2",
     "missable": false,
@@ -539,7 +539,7 @@
     "image_url": null
   },
   {
-    "id": "p276",
+    "id": "p218",
     "name": "Dead Tree",
     "chapter": "6",
     "missable": true,
@@ -550,7 +550,7 @@
     "image_url": null
   },
   {
-    "id": "p277",
+    "id": "p164",
     "name": "Decorative Lights",
     "chapter": "5",
     "missable": false,
@@ -561,7 +561,7 @@
     "image_url": null
   },
   {
-    "id": "p278",
+    "id": "p112",
     "name": "Deer Horn",
     "chapter": "1",
     "missable": false,
@@ -572,7 +572,7 @@
     "image_url": null
   },
   {
-    "id": "p279",
+    "id": "p027",
     "name": "Dell Clinic Sign",
     "chapter": "1",
     "missable": false,
@@ -583,7 +583,7 @@
     "image_url": null
   },
   {
-    "id": "p280",
+    "id": "p219",
     "name": "Display Robo",
     "chapter": "5",
     "missable": false,
@@ -594,7 +594,7 @@
     "image_url": null
   },
   {
-    "id": "p193",
+    "id": "p187",
     "name": "Doctor Jaming",
     "chapter": "4",
     "missable": true,
@@ -605,7 +605,7 @@
     "image_url": null
   },
   {
-    "id": "p281",
+    "id": "p220",
     "name": "Drawbridge",
     "chapter": "1",
     "missable": false,
@@ -616,7 +616,7 @@
     "image_url": null
   },
   {
-    "id": "p282",
+    "id": "p221",
     "name": "Drawer",
     "chapter": "1",
     "missable": false,
@@ -627,7 +627,7 @@
     "image_url": null
   },
   {
-    "id": "p283",
+    "id": "p160",
     "name": "Dresser",
     "chapter": "1",
     "missable": false,
@@ -638,7 +638,7 @@
     "image_url": null
   },
   {
-    "id": "p284",
+    "id": "p010",
     "name": "Drum Can",
     "chapter": "5",
     "missable": false,
@@ -649,7 +649,7 @@
     "image_url": null
   },
   {
-    "id": "p285",
+    "id": "p222",
     "name": "Earth Altar",
     "chapter": "6",
     "missable": false,
@@ -660,7 +660,7 @@
     "image_url": null
   },
   {
-    "id": "p194",
+    "id": "p120",
     "name": "Earth Gem Altar",
     "chapter": "6",
     "missable": false,
@@ -671,7 +671,7 @@
     "image_url": null
   },
   {
-    "id": "p286",
+    "id": "p056",
     "name": "Egg",
     "chapter": "1",
     "missable": false,
@@ -682,7 +682,7 @@
     "image_url": null
   },
   {
-    "id": "p287",
+    "id": "p095",
     "name": "Egg Chair",
     "chapter": "4",
     "missable": false,
@@ -693,7 +693,7 @@
     "image_url": null
   },
   {
-    "id": "p288",
+    "id": "p223",
     "name": "Egg-Shaped Transmitter",
     "chapter": "4",
     "missable": false,
@@ -704,7 +704,7 @@
     "image_url": null
   },
   {
-    "id": "p289",
+    "id": "p224",
     "name": "Electric Bulletin",
     "chapter": "3",
     "missable": false,
@@ -715,7 +715,7 @@
     "image_url": null
   },
   {
-    "id": "p290",
+    "id": "p109",
     "name": "Electric Sesame",
     "chapter": "5",
     "missable": false,
@@ -726,7 +726,7 @@
     "image_url": null
   },
   {
-    "id": "p291",
+    "id": "p174",
     "name": "Elena's Portrait",
     "chapter": "1",
     "missable": false,
@@ -737,7 +737,7 @@
     "image_url": null
   },
   {
-    "id": "p292",
+    "id": "p049",
     "name": "Elevator",
     "chapter": "5",
     "missable": false,
@@ -748,7 +748,7 @@
     "image_url": null
   },
   {
-    "id": "p293",
+    "id": "p116",
     "name": "Energy Pipe",
     "chapter": "4",
     "missable": false,
@@ -759,7 +759,7 @@
     "image_url": null
   },
   {
-    "id": "p294",
+    "id": "p225",
     "name": "Evening Sun",
     "chapter": "1",
     "missable": false,
@@ -770,7 +770,7 @@
     "image_url": null
   },
   {
-    "id": "p295",
+    "id": "p226",
     "name": "Eyeball",
     "chapter": "1",
     "missable": false,
@@ -781,7 +781,7 @@
     "image_url": null
   },
   {
-    "id": "p195",
+    "id": "p188",
     "name": "Face Behind the Devil Mask",
     "chapter": "3",
     "missable": false,
@@ -792,7 +792,7 @@
     "image_url": null
   },
   {
-    "id": "p196",
+    "id": "p189",
     "name": "Faintin' Bone Lord",
     "chapter": "5",
     "missable": false,
@@ -803,7 +803,7 @@
     "image_url": null
   },
   {
-    "id": "p197",
+    "id": "p190",
     "name": "Fallen Battleship",
     "chapter": "5",
     "missable": false,
@@ -814,7 +814,7 @@
     "image_url": null
   },
   {
-    "id": "p296",
+    "id": "p107",
     "name": "Fan",
     "chapter": "1",
     "missable": false,
@@ -825,7 +825,7 @@
     "image_url": null
   },
   {
-    "id": "p297",
+    "id": "p123",
     "name": "Fence",
     "chapter": "1",
     "missable": false,
@@ -836,7 +836,7 @@
     "image_url": null
   },
   {
-    "id": "p298",
+    "id": "p170",
     "name": "Figure",
     "chapter": "1",
     "missable": false,
@@ -847,7 +847,7 @@
     "image_url": null
   },
   {
-    "id": "p198",
+    "id": "p047",
     "name": "Find the Golden Egg!",
     "chapter": "2",
     "missable": false,
@@ -858,7 +858,7 @@
     "image_url": null
   },
   {
-    "id": "p299",
+    "id": "p227",
     "name": "Fire Altar",
     "chapter": "6",
     "missable": false,
@@ -869,7 +869,7 @@
     "image_url": null
   },
   {
-    "id": "p199",
+    "id": "p139",
     "name": "Fire Gem Altar",
     "chapter": "6",
     "missable": false,
@@ -880,7 +880,7 @@
     "image_url": null
   },
   {
-    "id": "p300",
+    "id": "p124",
     "name": "Fire House",
     "chapter": "2",
     "missable": true,
@@ -891,7 +891,7 @@
     "image_url": null
   },
   {
-    "id": "p200",
+    "id": "p085",
     "name": "Fire Squall",
     "chapter": "5",
     "missable": true,
@@ -902,7 +902,7 @@
     "image_url": null
   },
   {
-    "id": "p301",
+    "id": "p041",
     "name": "Fireplace",
     "chapter": "1",
     "missable": false,
@@ -913,7 +913,7 @@
     "image_url": null
   },
   {
-    "id": "p302",
+    "id": "p061",
     "name": "Fish",
     "chapter": "1",
     "missable": false,
@@ -924,7 +924,7 @@
     "image_url": null
   },
   {
-    "id": "p303",
+    "id": "p228",
     "name": "Fish Race Sign",
     "chapter": "4",
     "missable": false,
@@ -935,7 +935,7 @@
     "image_url": null
   },
   {
-    "id": "p304",
+    "id": "p229",
     "name": "Fishing Contest Sign",
     "chapter": "3",
     "missable": false,
@@ -946,7 +946,7 @@
     "image_url": null
   },
   {
-    "id": "p305",
+    "id": "p103",
     "name": "Flag",
     "chapter": "1",
     "missable": false,
@@ -957,7 +957,7 @@
     "image_url": null
   },
   {
-    "id": "p201",
+    "id": "p191",
     "name": "Floatin' Earth Digger",
     "chapter": "2",
     "missable": false,
@@ -968,7 +968,7 @@
     "image_url": null
   },
   {
-    "id": "p202",
+    "id": "p144",
     "name": "Flotsam Revived!",
     "chapter": "8",
     "missable": true,
@@ -979,7 +979,7 @@
     "image_url": null
   },
   {
-    "id": "p306",
+    "id": "p059",
     "name": "Flower",
     "chapter": "1",
     "missable": false,
@@ -990,7 +990,7 @@
     "image_url": null
   },
   {
-    "id": "p307",
+    "id": "p175",
     "name": "Flower Bathed in Light",
     "chapter": "7",
     "missable": false,
@@ -1001,7 +1001,7 @@
     "image_url": null
   },
   {
-    "id": "p308",
+    "id": "p230",
     "name": "Flower Bed",
     "chapter": "7",
     "missable": false,
@@ -1012,7 +1012,7 @@
     "image_url": null
   },
   {
-    "id": "p309",
+    "id": "p231",
     "name": "Flower Chair",
     "chapter": "1",
     "missable": false,
@@ -1023,7 +1023,7 @@
     "image_url": null
   },
   {
-    "id": "p310",
+    "id": "p014",
     "name": "Flower Chandelier",
     "chapter": "7",
     "missable": false,
@@ -1034,7 +1034,7 @@
     "image_url": null
   },
   {
-    "id": "p203",
+    "id": "p113",
     "name": "Flower of the Sun",
     "chapter": "7",
     "missable": false,
@@ -1045,7 +1045,7 @@
     "image_url": null
   },
   {
-    "id": "p204",
+    "id": "p192",
     "name": "Flying Battleship",
     "chapter": "3",
     "missable": true,
@@ -1056,7 +1056,7 @@
     "image_url": null
   },
   {
-    "id": "p311",
+    "id": "p035",
     "name": "Fountain",
     "chapter": "1",
     "missable": false,
@@ -1067,7 +1067,7 @@
     "image_url": null
   },
   {
-    "id": "p312",
+    "id": "p149",
     "name": "Freight Train",
     "chapter": "1",
     "missable": false,
@@ -1078,7 +1078,7 @@
     "image_url": null
   },
   {
-    "id": "p313",
+    "id": "p232",
     "name": "Fresco Painting",
     "chapter": "3",
     "missable": false,
@@ -1089,7 +1089,7 @@
     "image_url": null
   },
   {
-    "id": "p314",
+    "id": "p069",
     "name": "Fruit",
     "chapter": "2",
     "missable": false,
@@ -1100,7 +1100,7 @@
     "image_url": null
   },
   {
-    "id": "p315",
+    "id": "p233",
     "name": "Futuron 800",
     "chapter": "4",
     "missable": false,
@@ -1111,7 +1111,7 @@
     "image_url": null
   },
   {
-    "id": "p316",
+    "id": "p234",
     "name": "Gate",
     "chapter": "1",
     "missable": false,
@@ -1122,7 +1122,7 @@
     "image_url": null
   },
   {
-    "id": "p317",
+    "id": "p117",
     "name": "Generator",
     "chapter": "5",
     "missable": false,
@@ -1133,7 +1133,7 @@
     "image_url": null
   },
   {
-    "id": "p318",
+    "id": "p126",
     "name": "Geyser",
     "chapter": "5",
     "missable": false,
@@ -1144,7 +1144,7 @@
     "image_url": null
   },
   {
-    "id": "p319",
+    "id": "p156",
     "name": "Giant Yorda Tree",
     "chapter": "3",
     "missable": false,
@@ -1155,7 +1155,7 @@
     "image_url": null
   },
   {
-    "id": "p205",
+    "id": "p193",
     "name": "Gigantor Paznos",
     "chapter": "6",
     "missable": false,
@@ -1166,7 +1166,7 @@
     "image_url": null
   },
   {
-    "id": "p320",
+    "id": "p235",
     "name": "Glasses Case",
     "chapter": "1",
     "missable": false,
@@ -1177,7 +1177,7 @@
     "image_url": null
   },
   {
-    "id": "p321",
+    "id": "p236",
     "name": "Glowing Gate",
     "chapter": "3",
     "missable": false,
@@ -1188,7 +1188,7 @@
     "image_url": null
   },
   {
-    "id": "p322",
+    "id": "p237",
     "name": "Gold Gate",
     "chapter": "6",
     "missable": false,
@@ -1199,7 +1199,7 @@
     "image_url": null
   },
   {
-    "id": "p323",
+    "id": "p138",
     "name": "Gold Store",
     "chapter": "1",
     "missable": false,
@@ -1210,7 +1210,7 @@
     "image_url": null
   },
   {
-    "id": "p324",
+    "id": "p078",
     "name": "Golden Door",
     "chapter": "7",
     "missable": true,
@@ -1221,7 +1221,7 @@
     "image_url": null
   },
   {
-    "id": "p325",
+    "id": "p182",
     "name": "Grass",
     "chapter": "2",
     "missable": false,
@@ -1232,7 +1232,7 @@
     "image_url": null
   },
   {
-    "id": "p206",
+    "id": "p194",
     "name": "Griffon's Real Face",
     "chapter": "7",
     "missable": true,
@@ -1243,7 +1243,7 @@
     "image_url": null
   },
   {
-    "id": "p207",
+    "id": "p009",
     "name": "Gyumo's Yell",
     "chapter": "2",
     "missable": false,
@@ -1254,7 +1254,7 @@
     "image_url": null
   },
   {
-    "id": "p326",
+    "id": "p118",
     "name": "Hammer",
     "chapter": "5",
     "missable": false,
@@ -1265,7 +1265,7 @@
     "image_url": null
   },
   {
-    "id": "p327",
+    "id": "p238",
     "name": "Hammock",
     "chapter": "2",
     "missable": false,
@@ -1276,7 +1276,7 @@
     "image_url": null
   },
   {
-    "id": "p328",
+    "id": "p172",
     "name": "Hand-Sewn Silk Flag",
     "chapter": "3",
     "missable": false,
@@ -1287,7 +1287,7 @@
     "image_url": null
   },
   {
-    "id": "p329",
+    "id": "p239",
     "name": "Hat",
     "chapter": "3",
     "missable": false,
@@ -1298,7 +1298,7 @@
     "image_url": null
   },
   {
-    "id": "p210",
+    "id": "p023",
     "name": "Hmmmm! Jurak",
     "chapter": "2",
     "missable": false,
@@ -1309,7 +1309,7 @@
     "image_url": null
   },
   {
-    "id": "p330",
+    "id": "p240",
     "name": "Hoe",
     "chapter": "1",
     "missable": false,
@@ -1320,7 +1320,7 @@
     "image_url": null
   },
   {
-    "id": "p331",
+    "id": "p024",
     "name": "Holy Emblem",
     "chapter": "3",
     "missable": false,
@@ -1331,7 +1331,7 @@
     "image_url": null
   },
   {
-    "id": "p332",
+    "id": "p241",
     "name": "Hooked Nose",
     "chapter": "7",
     "missable": false,
@@ -1342,7 +1342,7 @@
     "image_url": null
   },
   {
-    "id": "p333",
+    "id": "p110",
     "name": "Horn",
     "chapter": "3",
     "missable": false,
@@ -1353,7 +1353,7 @@
     "image_url": null
   },
   {
-    "id": "p334",
+    "id": "p242",
     "name": "Hot Springs Pond",
     "chapter": "5",
     "missable": false,
@@ -1364,8 +1364,8 @@
     "image_url": null
   },
   {
-    "id": "p208",
-    "name": "Hot Springs Spirit (ghost)",
+    "id": "p070",
+    "name": "Hot Springs Spirit",
     "chapter": "5",
     "missable": false,
     "missableNote": null,
@@ -1375,7 +1375,7 @@
     "image_url": null
   },
   {
-    "id": "p209",
+    "id": "p195",
     "name": "Hurray For Rock Man!",
     "chapter": "3",
     "missable": false,
@@ -1386,7 +1386,7 @@
     "image_url": null
   },
   {
-    "id": "p335",
+    "id": "p243",
     "name": "Iron Bridge",
     "chapter": "1",
     "missable": false,
@@ -1397,7 +1397,7 @@
     "image_url": null
   },
   {
-    "id": "p336",
+    "id": "p171",
     "name": "Iron Maiden",
     "chapter": "1",
     "missable": false,
@@ -1408,7 +1408,7 @@
     "image_url": null
   },
   {
-    "id": "p337",
+    "id": "p244",
     "name": "Iron Shed",
     "chapter": "4",
     "missable": false,
@@ -1419,7 +1419,7 @@
     "image_url": null
   },
   {
-    "id": "p211",
+    "id": "p111",
     "name": "Ixion",
     "chapter": "6",
     "missable": false,
@@ -1430,7 +1430,7 @@
     "image_url": null
   },
   {
-    "id": "p338",
+    "id": "p245",
     "name": "Jurak Arms Sign",
     "chapter": "2",
     "missable": false,
@@ -1441,7 +1441,7 @@
     "image_url": null
   },
   {
-    "id": "p339",
+    "id": "p033",
     "name": "Jurak's Eye",
     "chapter": "2",
     "missable": false,
@@ -1452,7 +1452,7 @@
     "image_url": null
   },
   {
-    "id": "p340",
+    "id": "p180",
     "name": "Jurak's Nose",
     "chapter": "2",
     "missable": false,
@@ -1463,7 +1463,7 @@
     "image_url": null
   },
   {
-    "id": "p212",
+    "id": "p196",
     "name": "Kazarov Stonehenge",
     "chapter": "6",
     "missable": false,
@@ -1474,7 +1474,7 @@
     "image_url": null
   },
   {
-    "id": "p213",
+    "id": "p077",
     "name": "King Mardan",
     "chapter": "2",
     "missable": true,
@@ -1485,7 +1485,7 @@
     "image_url": null
   },
   {
-    "id": "p341",
+    "id": "p079",
     "name": "Labyrinth Door",
     "chapter": "7",
     "missable": true,
@@ -1496,7 +1496,7 @@
     "image_url": null
   },
   {
-    "id": "p342",
+    "id": "p022",
     "name": "Ladder",
     "chapter": "1",
     "missable": false,
@@ -1507,7 +1507,7 @@
     "image_url": null
   },
   {
-    "id": "p214",
+    "id": "p062",
     "name": "Lafrescia Stem",
     "chapter": "2",
     "missable": false,
@@ -1518,7 +1518,7 @@
     "image_url": null
   },
   {
-    "id": "p343",
+    "id": "p114",
     "name": "Lamp",
     "chapter": "1",
     "missable": false,
@@ -1529,7 +1529,7 @@
     "image_url": null
   },
   {
-    "id": "p344",
+    "id": "p045",
     "name": "Lao Chao's Trademark",
     "chapter": "3",
     "missable": false,
@@ -1540,7 +1540,7 @@
     "image_url": null
   },
   {
-    "id": "p345",
+    "id": "p165",
     "name": "Large Crane",
     "chapter": "5",
     "missable": false,
@@ -1551,7 +1551,7 @@
     "image_url": null
   },
   {
-    "id": "p346",
+    "id": "p030",
     "name": "Laundry",
     "chapter": "3",
     "missable": false,
@@ -1562,7 +1562,7 @@
     "image_url": null
   },
   {
-    "id": "p215",
+    "id": "p197",
     "name": "Lava Road",
     "chapter": "5",
     "missable": false,
@@ -1573,7 +1573,7 @@
     "image_url": null
   },
   {
-    "id": "p216",
+    "id": "p130",
     "name": "Legend of the Moon",
     "chapter": "7",
     "missable": false,
@@ -1584,7 +1584,7 @@
     "image_url": null
   },
   {
-    "id": "p347",
+    "id": "p053",
     "name": "Letter",
     "chapter": "1",
     "missable": false,
@@ -1595,7 +1595,7 @@
     "image_url": null
   },
   {
-    "id": "p348",
+    "id": "p246",
     "name": "Light",
     "chapter": "1",
     "missable": false,
@@ -1606,7 +1606,7 @@
     "image_url": null
   },
   {
-    "id": "p349",
+    "id": "p155",
     "name": "Light of Luna Stone",
     "chapter": "4",
     "missable": false,
@@ -1617,7 +1617,7 @@
     "image_url": null
   },
   {
-    "id": "p350",
+    "id": "p247",
     "name": "Lin's House",
     "chapter": "3",
     "missable": false,
@@ -1628,7 +1628,7 @@
     "image_url": null
   },
   {
-    "id": "p351",
+    "id": "p248",
     "name": "Log",
     "chapter": "2",
     "missable": false,
@@ -1639,7 +1639,7 @@
     "image_url": null
   },
   {
-    "id": "p352",
+    "id": "p071",
     "name": "Lotus Flower",
     "chapter": "7",
     "missable": false,
@@ -1650,7 +1650,7 @@
     "image_url": null
   },
   {
-    "id": "p353",
+    "id": "p072",
     "name": "Luna Stone Shards",
     "chapter": "4",
     "missable": false,
@@ -1661,7 +1661,7 @@
     "image_url": null
   },
   {
-    "id": "p354",
+    "id": "p087",
     "name": "Mailbox",
     "chapter": "1",
     "missable": false,
@@ -1672,7 +1672,7 @@
     "image_url": null
   },
   {
-    "id": "p355",
+    "id": "p092",
     "name": "Manhole",
     "chapter": "1",
     "missable": false,
@@ -1683,7 +1683,7 @@
     "image_url": null
   },
   {
-    "id": "p217",
+    "id": "p198",
     "name": "Master Utan",
     "chapter": "2",
     "missable": false,
@@ -1694,7 +1694,7 @@
     "image_url": null
   },
   {
-    "id": "p356",
+    "id": "p046",
     "name": "Milk Can",
     "chapter": "1",
     "missable": false,
@@ -1705,7 +1705,7 @@
     "image_url": null
   },
   {
-    "id": "p357",
+    "id": "p064",
     "name": "Monument",
     "chapter": "1",
     "missable": false,
@@ -1716,7 +1716,7 @@
     "image_url": null
   },
   {
-    "id": "p358",
+    "id": "p121",
     "name": "Moon Column",
     "chapter": "7",
     "missable": false,
@@ -1727,7 +1727,7 @@
     "image_url": null
   },
   {
-    "id": "p218",
+    "id": "p017",
     "name": "Moon Crystal",
     "chapter": "3",
     "missable": false,
@@ -1738,7 +1738,7 @@
     "image_url": null
   },
   {
-    "id": "p219",
+    "id": "p015",
     "name": "Moon Flower Palace",
     "chapter": "6",
     "missable": false,
@@ -1749,7 +1749,7 @@
     "image_url": null
   },
   {
-    "id": "p359",
+    "id": "p034",
     "name": "Morning Sun",
     "chapter": "1",
     "missable": false,
@@ -1760,7 +1760,7 @@
     "image_url": null
   },
   {
-    "id": "p360",
+    "id": "p249",
     "name": "Morton's Sundries Sign",
     "chapter": "1",
     "missable": false,
@@ -1771,7 +1771,7 @@
     "image_url": null
   },
   {
-    "id": "p361",
+    "id": "p140",
     "name": "Mount Gundor",
     "chapter": "5",
     "missable": false,
@@ -1782,7 +1782,7 @@
     "image_url": null
   },
   {
-    "id": "p220",
+    "id": "p199",
     "name": "Mr. Big Shot's Shadow",
     "chapter": "8",
     "missable": true,
@@ -1793,7 +1793,7 @@
     "image_url": null
   },
   {
-    "id": "p362",
+    "id": "p073",
     "name": "Mud",
     "chapter": "5",
     "missable": false,
@@ -1804,7 +1804,7 @@
     "image_url": null
   },
   {
-    "id": "p363",
+    "id": "p082",
     "name": "Mushroom",
     "chapter": "2",
     "missable": false,
@@ -1815,7 +1815,7 @@
     "image_url": null
   },
   {
-    "id": "p364",
+    "id": "p250",
     "name": "Mushroom Burgers Sign",
     "chapter": "2",
     "missable": false,
@@ -1826,7 +1826,7 @@
     "image_url": null
   },
   {
-    "id": "p365",
+    "id": "p169",
     "name": "Neo-Projector",
     "chapter": "4",
     "missable": false,
@@ -1837,7 +1837,7 @@
     "image_url": null
   },
   {
-    "id": "p221",
+    "id": "p200",
     "name": "Nice Massage",
     "chapter": "3",
     "missable": false,
@@ -1848,7 +1848,7 @@
     "image_url": null
   },
   {
-    "id": "p222",
+    "id": "p161",
     "name": "Night Stalker",
     "chapter": "1",
     "missable": false,
@@ -1859,7 +1859,7 @@
     "image_url": null
   },
   {
-    "id": "p366",
+    "id": "p093",
     "name": "Old-Style Robot",
     "chapter": "1",
     "missable": false,
@@ -1870,7 +1870,7 @@
     "image_url": null
   },
   {
-    "id": "p367",
+    "id": "p251",
     "name": "Opposed Island",
     "chapter": "4",
     "missable": false,
@@ -1881,7 +1881,7 @@
     "image_url": null
   },
   {
-    "id": "p368",
+    "id": "p052",
     "name": "Oven",
     "chapter": "1",
     "missable": false,
@@ -1892,7 +1892,7 @@
     "image_url": null
   },
   {
-    "id": "p369",
+    "id": "p252",
     "name": "Painting",
     "chapter": "1",
     "missable": false,
@@ -1903,7 +1903,7 @@
     "image_url": null
   },
   {
-    "id": "p370",
+    "id": "p100",
     "name": "Paints",
     "chapter": "1",
     "missable": false,
@@ -1914,7 +1914,7 @@
     "image_url": null
   },
   {
-    "id": "p371",
+    "id": "p075",
     "name": "Palm Tree",
     "chapter": "1",
     "missable": false,
@@ -1925,7 +1925,7 @@
     "image_url": null
   },
   {
-    "id": "p372",
+    "id": "p002",
     "name": "Parasol",
     "chapter": "1",
     "missable": false,
@@ -1936,7 +1936,7 @@
     "image_url": null
   },
   {
-    "id": "p373",
+    "id": "p253",
     "name": "Parn's Studio Sign",
     "chapter": "1",
     "missable": false,
@@ -1947,7 +1947,7 @@
     "image_url": null
   },
   {
-    "id": "p374",
+    "id": "p254",
     "name": "Patterned Rug",
     "chapter": "5",
     "missable": false,
@@ -1958,7 +1958,7 @@
     "image_url": null
   },
   {
-    "id": "p223",
+    "id": "p166",
     "name": "Paznos",
     "chapter": "5",
     "missable": false,
@@ -1969,7 +1969,7 @@
     "image_url": null
   },
   {
-    "id": "p375",
+    "id": "p255",
     "name": "Paznos Pattern",
     "chapter": "5",
     "missable": false,
@@ -1980,7 +1980,7 @@
     "image_url": null
   },
   {
-    "id": "p376",
+    "id": "p135",
     "name": "Peeping Pole",
     "chapter": "3",
     "missable": false,
@@ -1991,7 +1991,7 @@
     "image_url": null
   },
   {
-    "id": "p224",
+    "id": "p177",
     "name": "Phantom Memo Eater",
     "chapter": "3",
     "missable": true,
@@ -2002,7 +2002,7 @@
     "image_url": null
   },
   {
-    "id": "p377",
+    "id": "p158",
     "name": "Phone",
     "chapter": "1",
     "missable": false,
@@ -2013,7 +2013,7 @@
     "image_url": null
   },
   {
-    "id": "p378",
+    "id": "p256",
     "name": "Phonograph",
     "chapter": "1",
     "missable": false,
@@ -2024,7 +2024,7 @@
     "image_url": null
   },
   {
-    "id": "p379",
+    "id": "p257",
     "name": "Piano",
     "chapter": "1",
     "missable": false,
@@ -2035,7 +2035,7 @@
     "image_url": null
   },
   {
-    "id": "p380",
+    "id": "p258",
     "name": "Pier",
     "chapter": "1",
     "missable": false,
@@ -2046,7 +2046,7 @@
     "image_url": null
   },
   {
-    "id": "p381",
+    "id": "p259",
     "name": "Pinky",
     "chapter": "6",
     "missable": false,
@@ -2057,7 +2057,7 @@
     "image_url": null
   },
   {
-    "id": "p382",
+    "id": "p102",
     "name": "Pipe",
     "chapter": "1",
     "missable": false,
@@ -2068,7 +2068,7 @@
     "image_url": null
   },
   {
-    "id": "p383",
+    "id": "p260",
     "name": "Police Sign",
     "chapter": "1",
     "missable": false,
@@ -2079,7 +2079,7 @@
     "image_url": null
   },
   {
-    "id": "p384",
+    "id": "p042",
     "name": "Polly's Bakery Sign",
     "chapter": "1",
     "missable": false,
@@ -2090,7 +2090,7 @@
     "image_url": null
   },
   {
-    "id": "p385",
+    "id": "p067",
     "name": "Pork Dumpling",
     "chapter": "3",
     "missable": false,
@@ -2101,7 +2101,7 @@
     "image_url": null
   },
   {
-    "id": "p386",
+    "id": "p094",
     "name": "Post",
     "chapter": "1",
     "missable": false,
@@ -2112,7 +2112,7 @@
     "image_url": null
   },
   {
-    "id": "p387",
+    "id": "p039",
     "name": "Pot",
     "chapter": "1",
     "missable": false,
@@ -2123,7 +2123,7 @@
     "image_url": null
   },
   {
-    "id": "p388",
+    "id": "p145",
     "name": "Pot Torch",
     "chapter": "2",
     "missable": false,
@@ -2134,7 +2134,7 @@
     "image_url": null
   },
   {
-    "id": "p389",
+    "id": "p105",
     "name": "Power Arm",
     "chapter": "5",
     "missable": false,
@@ -2145,7 +2145,7 @@
     "image_url": null
   },
   {
-    "id": "p390",
+    "id": "p133",
     "name": "Propeller",
     "chapter": "5",
     "missable": false,
@@ -2156,7 +2156,7 @@
     "image_url": null
   },
   {
-    "id": "p391",
+    "id": "p018",
     "name": "Pumpkin",
     "chapter": "1",
     "missable": false,
@@ -2167,7 +2167,7 @@
     "image_url": null
   },
   {
-    "id": "p225",
+    "id": "p162",
     "name": "Puppet Shingala",
     "chapter": "4",
     "missable": true,
@@ -2178,7 +2178,7 @@
     "image_url": null
   },
   {
-    "id": "p392",
+    "id": "p261",
     "name": "Quartz",
     "chapter": "2",
     "missable": false,
@@ -2189,7 +2189,7 @@
     "image_url": null
   },
   {
-    "id": "p226",
+    "id": "p201",
     "name": "R. Butterfly United",
     "chapter": "2",
     "missable": true,
@@ -2200,7 +2200,7 @@
     "image_url": null
   },
   {
-    "id": "p393",
+    "id": "p262",
     "name": "Railroad",
     "chapter": "1",
     "missable": false,
@@ -2211,7 +2211,7 @@
     "image_url": null
   },
   {
-    "id": "p394",
+    "id": "p141",
     "name": "Rapper",
     "chapter": "1",
     "missable": false,
@@ -2222,7 +2222,7 @@
     "image_url": null
   },
   {
-    "id": "p395",
+    "id": "p263",
     "name": "Red House",
     "chapter": "4",
     "missable": false,
@@ -2233,7 +2233,7 @@
     "image_url": null
   },
   {
-    "id": "p396",
+    "id": "p146",
     "name": "Refrigerator",
     "chapter": "1",
     "missable": false,
@@ -2244,7 +2244,7 @@
     "image_url": null
   },
   {
-    "id": "p397",
+    "id": "p264",
     "name": "Register",
     "chapter": "1",
     "missable": false,
@@ -2255,7 +2255,7 @@
     "image_url": null
   },
   {
-    "id": "p398",
+    "id": "p125",
     "name": "Relaxation Fountain",
     "chapter": "7",
     "missable": false,
@@ -2266,7 +2266,7 @@
     "image_url": null
   },
   {
-    "id": "p399",
+    "id": "p131",
     "name": "Rifle",
     "chapter": "1",
     "missable": false,
@@ -2277,7 +2277,7 @@
     "image_url": null
   },
   {
-    "id": "p400",
+    "id": "p063",
     "name": "River",
     "chapter": "1",
     "missable": false,
@@ -2288,7 +2288,7 @@
     "image_url": null
   },
   {
-    "id": "p401",
+    "id": "p265",
     "name": "Road to Golbad",
     "chapter": "7",
     "missable": false,
@@ -2299,7 +2299,7 @@
     "image_url": null
   },
   {
-    "id": "p402",
+    "id": "p266",
     "name": "Robot",
     "chapter": "1",
     "missable": false,
@@ -2310,7 +2310,7 @@
     "image_url": null
   },
   {
-    "id": "p403",
+    "id": "p060",
     "name": "Rock",
     "chapter": "1",
     "missable": false,
@@ -2321,7 +2321,7 @@
     "image_url": null
   },
   {
-    "id": "p404",
+    "id": "p136",
     "name": "Rotating Sign",
     "chapter": "3",
     "missable": false,
@@ -2332,7 +2332,7 @@
     "image_url": null
   },
   {
-    "id": "p405",
+    "id": "p267",
     "name": "Rug",
     "chapter": "1",
     "missable": false,
@@ -2343,8 +2343,8 @@
     "image_url": null
   },
   {
-    "id": "p227",
-    "name": "Ruler of the Pond (ghost)",
+    "id": "p031",
+    "name": "Ruler of the Pond",
     "chapter": "1",
     "missable": false,
     "missableNote": null,
@@ -2354,7 +2354,7 @@
     "image_url": null
   },
   {
-    "id": "p406",
+    "id": "p003",
     "name": "Runaway Dragon",
     "chapter": "3",
     "missable": false,
@@ -2365,7 +2365,7 @@
     "image_url": null
   },
   {
-    "id": "p407",
+    "id": "p025",
     "name": "Saint's Writings",
     "chapter": "3",
     "missable": false,
@@ -2376,7 +2376,7 @@
     "image_url": null
   },
   {
-    "id": "p408",
+    "id": "p268",
     "name": "Saw",
     "chapter": "1",
     "missable": false,
@@ -2387,7 +2387,7 @@
     "image_url": null
   },
   {
-    "id": "p409",
+    "id": "p101",
     "name": "Scale",
     "chapter": "3",
     "missable": false,
@@ -2398,7 +2398,7 @@
     "image_url": null
   },
   {
-    "id": "p410",
+    "id": "p269",
     "name": "Scroll",
     "chapter": "3",
     "missable": false,
@@ -2409,7 +2409,7 @@
     "image_url": null
   },
   {
-    "id": "p411",
+    "id": "p128",
     "name": "Search Light",
     "chapter": "4",
     "missable": false,
@@ -2420,7 +2420,7 @@
     "image_url": null
   },
   {
-    "id": "p412",
+    "id": "p006",
     "name": "Shield",
     "chapter": "1",
     "missable": false,
@@ -2431,7 +2431,7 @@
     "image_url": null
   },
   {
-    "id": "p413",
+    "id": "p157",
     "name": "Show Window",
     "chapter": "1",
     "missable": false,
@@ -2442,7 +2442,7 @@
     "image_url": null
   },
   {
-    "id": "p414",
+    "id": "p270",
     "name": "Shrubbery",
     "chapter": "1",
     "missable": false,
@@ -2453,7 +2453,7 @@
     "image_url": null
   },
   {
-    "id": "p415",
+    "id": "p271",
     "name": "Sign",
     "chapter": "1",
     "missable": false,
@@ -2464,7 +2464,7 @@
     "image_url": null
   },
   {
-    "id": "p416",
+    "id": "p272",
     "name": "Silver Bench",
     "chapter": "7",
     "missable": false,
@@ -2475,7 +2475,7 @@
     "image_url": null
   },
   {
-    "id": "p417",
+    "id": "p147",
     "name": "Small Generator",
     "chapter": "4",
     "missable": false,
@@ -2486,7 +2486,7 @@
     "image_url": null
   },
   {
-    "id": "p418",
+    "id": "p068",
     "name": "Special Peking Duck",
     "chapter": "3",
     "missable": false,
@@ -2497,7 +2497,7 @@
     "image_url": null
   },
   {
-    "id": "p228",
+    "id": "p173",
     "name": "Spinning Ivanoff",
     "chapter": "3",
     "missable": false,
@@ -2508,7 +2508,7 @@
     "image_url": null
   },
   {
-    "id": "p229",
+    "id": "p202",
     "name": "Spooky Grass Smile",
     "chapter": "2",
     "missable": false,
@@ -2519,7 +2519,7 @@
     "image_url": null
   },
   {
-    "id": "p419",
+    "id": "p273",
     "name": "Stained Glass",
     "chapter": "1",
     "missable": false,
@@ -2530,7 +2530,7 @@
     "image_url": null
   },
   {
-    "id": "p420",
+    "id": "p274",
     "name": "Staircase",
     "chapter": "1",
     "missable": false,
@@ -2541,7 +2541,7 @@
     "image_url": null
   },
   {
-    "id": "p421",
+    "id": "p275",
     "name": "Stand",
     "chapter": "1",
     "missable": false,
@@ -2552,7 +2552,7 @@
     "image_url": null
   },
   {
-    "id": "p422",
+    "id": "p176",
     "name": "Star Lamp",
     "chapter": "3",
     "missable": false,
@@ -2563,7 +2563,7 @@
     "image_url": null
   },
   {
-    "id": "p423",
+    "id": "p074",
     "name": "Stardust Pond",
     "chapter": "7",
     "missable": false,
@@ -2574,7 +2574,7 @@
     "image_url": null
   },
   {
-    "id": "p426",
+    "id": "p065",
     "name": "Starglass",
     "chapter": "3",
     "missable": false,
@@ -2585,7 +2585,7 @@
     "image_url": null
   },
   {
-    "id": "p424",
+    "id": "p276",
     "name": "Starlight Stairway",
     "chapter": "7",
     "missable": false,
@@ -2596,7 +2596,7 @@
     "image_url": null
   },
   {
-    "id": "p425",
+    "id": "p277",
     "name": "Starlight Tunnel",
     "chapter": "7",
     "missable": false,
@@ -2607,7 +2607,7 @@
     "image_url": null
   },
   {
-    "id": "p427",
+    "id": "p143",
     "name": "Stove",
     "chapter": "1",
     "missable": false,
@@ -2618,7 +2618,7 @@
     "image_url": null
   },
   {
-    "id": "p428",
+    "id": "p142",
     "name": "Streetlight",
     "chapter": "1",
     "missable": false,
@@ -2629,7 +2629,7 @@
     "image_url": null
   },
   {
-    "id": "p429",
+    "id": "p167",
     "name": "Sulfur-Colored Juice",
     "chapter": "5",
     "missable": false,
@@ -2640,7 +2640,7 @@
     "image_url": null
   },
   {
-    "id": "p430",
+    "id": "p057",
     "name": "Sun Chair",
     "chapter": "7",
     "missable": false,
@@ -2651,7 +2651,7 @@
     "image_url": null
   },
   {
-    "id": "p230",
+    "id": "p080",
     "name": "Sun Chamber Gate Keeper",
     "chapter": "7",
     "missable": false,
@@ -2662,7 +2662,7 @@
     "image_url": null
   },
   {
-    "id": "p431",
+    "id": "p058",
     "name": "Sun Table",
     "chapter": "7",
     "missable": false,
@@ -2673,7 +2673,7 @@
     "image_url": null
   },
   {
-    "id": "p432",
+    "id": "p278",
     "name": "Sunshade",
     "chapter": "1",
     "missable": false,
@@ -2684,7 +2684,7 @@
     "image_url": null
   },
   {
-    "id": "p231",
+    "id": "p137",
     "name": "Symbol of Luna Lab",
     "chapter": "4",
     "missable": false,
@@ -2695,7 +2695,7 @@
     "image_url": null
   },
   {
-    "id": "p433",
+    "id": "p091",
     "name": "System 5WP2",
     "chapter": "4",
     "missable": false,
@@ -2706,7 +2706,7 @@
     "image_url": null
   },
   {
-    "id": "p434",
+    "id": "p279",
     "name": "T.V.",
     "chapter": "4",
     "missable": false,
@@ -2717,7 +2717,7 @@
     "image_url": null
   },
   {
-    "id": "p435",
+    "id": "p280",
     "name": "Table",
     "chapter": "1",
     "missable": false,
@@ -2728,7 +2728,7 @@
     "image_url": null
   },
   {
-    "id": "p436",
+    "id": "p132",
     "name": "Telescope",
     "chapter": "1",
     "missable": false,
@@ -2739,7 +2739,7 @@
     "image_url": null
   },
   {
-    "id": "p437",
+    "id": "p007",
     "name": "The Moon",
     "chapter": "1",
     "missable": false,
@@ -2750,7 +2750,7 @@
     "image_url": null
   },
   {
-    "id": "p438",
+    "id": "p054",
     "name": "The Sun",
     "chapter": "1",
     "missable": false,
@@ -2761,7 +2761,7 @@
     "image_url": null
   },
   {
-    "id": "p232",
+    "id": "p013",
     "name": "The Ultimate Gaspard",
     "chapter": "5",
     "missable": true,
@@ -2772,7 +2772,7 @@
     "image_url": null
   },
   {
-    "id": "p439",
+    "id": "p122",
     "name": "Tiny Hammer",
     "chapter": "1",
     "missable": false,
@@ -2783,7 +2783,7 @@
     "image_url": null
   },
   {
-    "id": "p440",
+    "id": "p281",
     "name": "Torch",
     "chapter": "3",
     "missable": false,
@@ -2794,7 +2794,7 @@
     "image_url": null
   },
   {
-    "id": "p233",
+    "id": "p203",
     "name": "Tore's Nap",
     "chapter": "2",
     "missable": false,
@@ -2805,7 +2805,7 @@
     "image_url": null
   },
   {
-    "id": "p441",
+    "id": "p148",
     "name": "Traffic Light",
     "chapter": "1",
     "missable": false,
@@ -2816,7 +2816,7 @@
     "image_url": null
   },
   {
-    "id": "p442",
+    "id": "p050",
     "name": "Transmission Device",
     "chapter": "5",
     "missable": false,
@@ -2827,7 +2827,7 @@
     "image_url": null
   },
   {
-    "id": "p443",
+    "id": "p088",
     "name": "Trashcan",
     "chapter": "1",
     "missable": false,
@@ -2838,7 +2838,7 @@
     "image_url": null
   },
   {
-    "id": "p444",
+    "id": "p115",
     "name": "Tree",
     "chapter": "1",
     "missable": false,
@@ -2849,7 +2849,7 @@
     "image_url": null
   },
   {
-    "id": "p445",
+    "id": "p098",
     "name": "Vacuum",
     "chapter": "1",
     "missable": false,
@@ -2860,7 +2860,7 @@
     "image_url": null
   },
   {
-    "id": "p446",
+    "id": "p282",
     "name": "Vacuum Bag",
     "chapter": "1",
     "missable": false,
@@ -2871,7 +2871,7 @@
     "image_url": null
   },
   {
-    "id": "p447",
+    "id": "p283",
     "name": "Vegetable/Fruit",
     "chapter": "1",
     "missable": false,
@@ -2882,7 +2882,7 @@
     "image_url": null
   },
   {
-    "id": "p448",
+    "id": "p284",
     "name": "Vending Machine",
     "chapter": "1",
     "missable": false,
@@ -2893,7 +2893,7 @@
     "image_url": null
   },
   {
-    "id": "p234",
+    "id": "p204",
     "name": "Veniccio's Evening Sun",
     "chapter": "4",
     "missable": false,
@@ -2904,7 +2904,7 @@
     "image_url": null
   },
   {
-    "id": "p449",
+    "id": "p285",
     "name": "Ventilation",
     "chapter": "4",
     "missable": false,
@@ -2915,7 +2915,7 @@
     "image_url": null
   },
   {
-    "id": "p450",
+    "id": "p286",
     "name": "Victory Stand",
     "chapter": "3",
     "missable": false,
@@ -2926,7 +2926,7 @@
     "image_url": null
   },
   {
-    "id": "p451",
+    "id": "p089",
     "name": "Warehouse",
     "chapter": "3",
     "missable": false,
@@ -2937,7 +2937,7 @@
     "image_url": null
   },
   {
-    "id": "p452",
+    "id": "p287",
     "name": "Water Altar",
     "chapter": "6",
     "missable": false,
@@ -2948,7 +2948,7 @@
     "image_url": null
   },
   {
-    "id": "p235",
+    "id": "p205",
     "name": "Water Gem Altar",
     "chapter": "6",
     "missable": false,
@@ -2959,7 +2959,7 @@
     "image_url": null
   },
   {
-    "id": "p453",
+    "id": "p083",
     "name": "Water Tank",
     "chapter": "4",
     "missable": false,
@@ -2970,7 +2970,7 @@
     "image_url": null
   },
   {
-    "id": "p454",
+    "id": "p288",
     "name": "Water Wheel",
     "chapter": "2",
     "missable": false,
@@ -2981,7 +2981,7 @@
     "image_url": null
   },
   {
-    "id": "p455",
+    "id": "p004",
     "name": "Waterfall",
     "chapter": "1",
     "missable": false,
@@ -2992,7 +2992,7 @@
     "image_url": null
   },
   {
-    "id": "p456",
+    "id": "p016",
     "name": "Waterfall Curtain",
     "chapter": "7",
     "missable": false,
@@ -3003,7 +3003,7 @@
     "image_url": null
   },
   {
-    "id": "p457",
+    "id": "p150",
     "name": "Weapon",
     "chapter": "1",
     "missable": false,
@@ -3014,7 +3014,7 @@
     "image_url": null
   },
   {
-    "id": "p458",
+    "id": "p040",
     "name": "Weapon Shop Sign",
     "chapter": "1",
     "missable": false,
@@ -3025,7 +3025,7 @@
     "image_url": null
   },
   {
-    "id": "p459",
+    "id": "p019",
     "name": "Weather Vane",
     "chapter": "4",
     "missable": false,
@@ -3036,7 +3036,7 @@
     "image_url": null
   },
   {
-    "id": "p460",
+    "id": "p289",
     "name": "Weight Gauge",
     "chapter": "1",
     "missable": false,
@@ -3047,7 +3047,7 @@
     "image_url": null
   },
   {
-    "id": "p461",
+    "id": "p029",
     "name": "Well",
     "chapter": "3",
     "missable": false,
@@ -3058,7 +3058,7 @@
     "image_url": null
   },
   {
-    "id": "p462",
+    "id": "p043",
     "name": "Wheat Flour",
     "chapter": "1",
     "missable": false,
@@ -3069,7 +3069,7 @@
     "image_url": null
   },
   {
-    "id": "p463",
+    "id": "p097",
     "name": "Wheel",
     "chapter": "1",
     "missable": false,
@@ -3080,7 +3080,7 @@
     "image_url": null
   },
   {
-    "id": "p464",
+    "id": "p290",
     "name": "Wind Altar",
     "chapter": "6",
     "missable": false,
@@ -3091,7 +3091,7 @@
     "image_url": null
   },
   {
-    "id": "p236",
+    "id": "p134",
     "name": "Wind Gem Altar",
     "chapter": "6",
     "missable": false,
@@ -3102,7 +3102,7 @@
     "image_url": null
   },
   {
-    "id": "p465",
+    "id": "p108",
     "name": "Windmill",
     "chapter": "4",
     "missable": false,
@@ -3113,7 +3113,7 @@
     "image_url": null
   },
   {
-    "id": "p466",
+    "id": "p020",
     "name": "Windmill Feather",
     "chapter": "4",
     "missable": false,
@@ -3124,7 +3124,7 @@
     "image_url": null
   },
   {
-    "id": "p467",
+    "id": "p036",
     "name": "Window",
     "chapter": "1",
     "missable": false,
@@ -3135,7 +3135,7 @@
     "image_url": null
   },
   {
-    "id": "p468",
+    "id": "p159",
     "name": "Withered Jurak",
     "chapter": "2",
     "missable": false,
@@ -3146,7 +3146,7 @@
     "image_url": null
   },
   {
-    "id": "p469",
+    "id": "p291",
     "name": "Wooden Bookshelf",
     "chapter": "2",
     "missable": false,
@@ -3157,7 +3157,7 @@
     "image_url": null
   },
   {
-    "id": "p470",
+    "id": "p037",
     "name": "Wooden Box",
     "chapter": "1",
     "missable": false,
@@ -3168,7 +3168,7 @@
     "image_url": null
   },
   {
-    "id": "p471",
+    "id": "p292",
     "name": "Woody Tailor Sign",
     "chapter": "2",
     "missable": false,
@@ -3179,7 +3179,7 @@
     "image_url": null
   },
   {
-    "id": "p472",
+    "id": "p104",
     "name": "Work Arm",
     "chapter": "4",
     "missable": false,
@@ -3190,7 +3190,7 @@
     "image_url": null
   },
   {
-    "id": "p473",
+    "id": "p151",
     "name": "Work Crane",
     "chapter": "5",
     "missable": false,
@@ -3201,7 +3201,7 @@
     "image_url": null
   },
   {
-    "id": "p474",
+    "id": "p154",
     "name": "Work Equipment",
     "chapter": "4",
     "missable": false,
@@ -3212,7 +3212,7 @@
     "image_url": null
   },
   {
-    "id": "p475",
+    "id": "p011",
     "name": "Work Robot",
     "chapter": "4",
     "missable": false,
@@ -3223,7 +3223,7 @@
     "image_url": null
   },
   {
-    "id": "p476",
+    "id": "p293",
     "name": "Zelmite Found!",
     "chapter": "8",
     "missable": false,
