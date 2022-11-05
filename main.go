@@ -6,7 +6,6 @@ import (
 
 	. "github.com/liqMix/DC2Photobook/internal/components"
 	"github.com/liqMix/DC2Photobook/internal/data"
-	"github.com/liqMix/DC2Photobook/internal/utils"
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 	"github.com/maxence-charriere/go-app/v9/pkg/ui"
 )
@@ -16,23 +15,39 @@ const stylePrefix string = "goapp-"
 type Application struct {
 	app.Compo
 
-	loaded  bool
-	path    *utils.Path
-	Menu    MainMenu
-	Submenu Submenu
-	Content Content
+	loaded       bool
+	currentFocus string
+	Menu         MainMenu
+	Submenu      Submenu
+	Content      Content
 }
 
 func (a *Application) OnNav(ctx app.Context) {
-	a.path = utils.GetPath()
 	a.Submenu.HandleNavChange()
+	// a.focusElement(ctx)
+}
+
+// func (a *Application) focusElement(ctx app.Context) {
+// 	a.currentFocus = a.path.Fragment
+// 	link := app.Window().GetElementByID(a.currentFocus)
+// 	if link.Truthy() {
+// 		link.Set("autofocus", true)
+// 	}
+// }
+func (a *Application) unfocusElement(ctx app.Context, e app.Event) {
+	app.Log("onclick")
+	// link := app.Window().GetElementByID(a.currentFocus)
+	// if link.Truthy() {
+	// 	link.Set("className", "")
+	// }
 }
 
 func (a *Application) OnMount(ctx app.Context) {
+	app.Log("mounted")
 	ctx.SetState("loaded", false)
 	data.InitAppData(&ctx)
 	data.InitUserData(&ctx)
-	a.path = utils.GetPath()
+	app.Window().AddEventListener("click", a.unfocusElement)
 	ctx.ObserveState("loaded").
 		While(func() bool {
 			return !a.loaded
@@ -78,6 +93,7 @@ func main() {
 			Default: "/web/img/logo.png",
 		},
 		Styles: []string{
+			"/web/css/app.css",
 			"/web/css/docs.css",
 		},
 	})

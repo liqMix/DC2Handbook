@@ -21,19 +21,19 @@ func (s *Submenu) HandleNavChange() {
 	appData := GetAppData()
 	var list []IBase
 	switch path.Root {
-	case "photos":
+	case "/photos":
 		list = make([]IBase, len(appData.Photos))
 		for i := range appData.Photos {
 			list[i] = &appData.Photos[i]
 		}
 
-	case "inventions":
+	case "/inventions":
 		list = make([]IBase, len(appData.Inventions))
 		for i := range appData.Inventions {
 			list[i] = &appData.Inventions[i]
 		}
 
-	case "items":
+	case "/items":
 		list = make([]IBase, len(appData.Items))
 		for i := range appData.Items {
 			list[i] = &appData.Items[i]

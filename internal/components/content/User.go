@@ -13,8 +13,6 @@ func handleChapterUpdate() app.EventHandler {
 	return func(ctx app.Context, e app.Event) {
 		userData := data.GetUserData()
 		newChapter := ctx.JSSrc().Get("value").String()
-		app.Log("setting chapter")
-		app.Log(newChapter)
 		userData.SetChapter(newChapter)
 	}
 }
@@ -23,8 +21,7 @@ func (user *User) renderChapterSettings(userData *data.UserData) app.UI {
 	currentChapter, err := data.GetChapter(userData.Chapter)
 	chapters := data.GetAppData().Chapters
 	if err != nil {
-		app.Log(chapters)
-		currentChapter = &chapters[0]
+		currentChapter = chapters[0]
 	}
 	return app.Div().Body(
 		app.H1().Text("Chapter: "+currentChapter.Name),

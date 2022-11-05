@@ -10,8 +10,9 @@ type IBase interface {
 }
 
 type Base struct {
-	ID   string
-	Name string
+	ID      string
+	Name    string
+	Chapter string
 }
 
 func (b *Base) ToLinkItem() *LinkItem {

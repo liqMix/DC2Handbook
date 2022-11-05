@@ -20,7 +20,7 @@ func (pc *Items) Render() app.UI {
 }
 
 func renderItem(i Item) app.UI {
-	return app.Div().ID(i.ID).Body(
+	return app.Div().Class("list-item").ID(i.ID).Body(
 		app.H3().Body(app.Text(i.Name)),
 		app.Br(),
 		app.Text(i.Value+" Gilda"),

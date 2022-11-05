@@ -1,6 +1,7 @@
 package components
 
 import (
+	"github.com/liqMix/DC2Photobook/internal/utils"
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 )
 
@@ -8,6 +9,18 @@ const stylePrefix string = "goapp-"
 
 type MainMenu struct {
 	app.Compo
+
+	selected string
+}
+
+func (m *MainMenu) renderOption(path, label string) app.UI {
+	className := "link heading fit"
+	if path == m.selected {
+		className += " vignette"
+	}
+	return app.A().Href(path).Class(className).Body(
+		app.Text(label),
+	)
 }
 
 func (m *MainMenu) renderTitle() app.UI {
@@ -22,29 +35,17 @@ func (m *MainMenu) renderTitle() app.UI {
 
 func (m *MainMenu) renderHomeOptions() app.UI {
 	return app.Div().Class("vspace-top").Body(
-		app.A().Href("/").Class("link heading fit").Body(
-			app.Text("Home"),
-		),
-		app.A().Href("/about").Class("link heading fit").Body(
-			app.Text("About"),
-		),
-		app.A().Href("/user").Class("link heading fit").Body(
-			app.Text("User"),
-		),
+		m.renderOption("/", "Home"),
+		m.renderOption("/about", "About"),
+		m.renderOption("/user", "User"),
 	)
 }
 
 func (m *MainMenu) renderAppOptions() app.UI {
 	return app.Div().Class("vspace-top").Body(
-		app.A().Href("/items").Class("link heading fit").Body(
-			app.Text("Items"),
-		),
-		app.A().Href("/photos").Class("link heading fit").Body(
-			app.Text("Photos"),
-		),
-		app.A().Href("/inventions").Class("link heading fit").Body(
-			app.Text("Inventions"),
-		),
+		m.renderOption("/items", "Items"),
+		m.renderOption("/photos", "Photos"),
+		m.renderOption("/inventions", "Inventions"),
 	)
 }
 
@@ -58,6 +59,7 @@ func (m *MainMenu) renderOptions() app.UI {
 }
 
 func (m *MainMenu) Render() app.UI {
+	m.selected = utils.GetPath().Root
 	return app.Div().Body(
 		m.renderTitle(),
 		m.renderOptions(),

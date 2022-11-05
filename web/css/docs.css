@@ -13,20 +13,13 @@ body {
   color: silver;
 
   scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.08);
-  scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
-  border-radius: 12px;
-  width: 1px;
-  height: 1px;
   background-color: rgba(255, 255, 255, 0.08);
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 12px;
-  width: 1px;
-  height: 1px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -298,7 +291,7 @@ h2 {
 }
 
 .focus {
-  color: white !important;
+  background-color: rgb(103, 116, 116) 5s ease;
 }
 
 .error {

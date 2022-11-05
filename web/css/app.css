@@ -1,0 +1,24 @@
+.list-item {
+  background-color: transparent;
+}
+.list-item:focus {
+  background-color: darkkhaki 2s ease;
+}
+
+.list-item_descripton {
+  display: block;
+}
+.list-item_sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.list-item_sub_item {
+  border: 2em;
+}
+
+.photo-taken {
+  cursor: pointer;
+  display: inline-block;
+}

@@ -24,6 +24,7 @@ type AppData struct {
 	Inventions []Invention
 	Items      []Item
 
+	byId map[string]interface{}
 	host string
 }
 
@@ -31,10 +32,11 @@ type AppData struct {
 func InitAppData(ctx *app.Context) {
 	appData = &AppData{}
 	appData.host = "http://" + app.Window().URL().Host
+	appData.byId = make(map[string]interface{})
+	appData.initInventions()
+	appData.initPhotos()
 	appData.initChapters()
 	appData.initItems()
-	appData.initPhotos()
-	appData.initInventions()
 	(*ctx).SetState("loaded", true)
 }
 
@@ -48,6 +50,9 @@ func (ad *AppData) initChapters() {
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 	json.Unmarshal(body, &ad.Chapters)
+	for _, v := range ad.Chapters {
+		ad.byId[v.ID] = v
+	}
 }
 
 func (ad *AppData) initItems() {
@@ -60,6 +65,9 @@ func (ad *AppData) initItems() {
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 	json.Unmarshal(body, &ad.Items)
+	for _, v := range ad.Items {
+		ad.byId[v.ID] = v
+	}
 }
 
 func (ad *AppData) initPhotos() {
@@ -72,6 +80,9 @@ func (ad *AppData) initPhotos() {
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 	json.Unmarshal(body, &ad.Photos)
+	for _, v := range ad.Photos {
+		ad.byId[v.ID] = v
+	}
 }
 
 func (ad *AppData) initInventions() {
@@ -84,6 +95,9 @@ func (ad *AppData) initInventions() {
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 	json.Unmarshal(body, &ad.Inventions)
+	for _, v := range ad.Inventions {
+		ad.byId[v.ID] = v
+	}
 }
 
 /* Get */
@@ -91,12 +105,34 @@ func GetAppData() *AppData {
 	return appData
 }
 
-func GetChapter(chapterID string) (*Chapter, error) {
-	for _, v := range appData.Chapters {
-		app.Log(v)
-		if v.ID == chapterID {
-			return &v, nil
-		}
+func GetChapter(id string) (Chapter, error) {
+	c, ok := appData.byId[id]
+	if !ok {
+		return Chapter{}, errors.New("Chapter not found")
 	}
-	return &Chapter{}, errors.New("Chapter not found")
+	return c.(Chapter), nil
+}
+
+func GetPhoto(id string) (Photo, error) {
+	p, ok := appData.byId[id]
+	if !ok {
+		return Photo{}, errors.New("Photo not found")
+	}
+	return p.(Photo), nil
+}
+
+func GetInvention(id string) (Invention, error) {
+	i, ok := appData.byId[id]
+	if !ok {
+		return Invention{}, errors.New("Invention not found")
+	}
+	return i.(Invention), nil
+}
+
+func GetItem(id string) (Item, error) {
+	i, ok := appData.byId[id]
+	if !ok {
+		return Item{}, errors.New("Item not found")
+	}
+	return i.(Item), nil
 }

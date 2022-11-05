@@ -8,9 +8,9 @@ type RecipeItem struct {
 type Invention struct {
 	Base
 	ImageURL    string
-	Chapter     uint8
+	Chapter     string
 	Description string
-	Photos      []*Photo
+	Photos      []Photo
 	Recipe      []RecipeItem
 }
 

@@ -28,13 +28,14 @@ func ToggleHasPhoto(photoID string) app.EventHandler {
 }
 
 func renderPhoto(p *Photo, userData *UserData) app.UI {
-	userHasPhoto := userData.HasPhoto(p.ID)
-	statusUI := userData.GetPhotoStatus(p).ToUI(userData.Chapter, p.Chapter)
-
-	return app.Div().ID(p.ID).Body(
+	statusUI := userData.GetPhotoStatus(p).
+		ToUI(userData.Chapter, p.Chapter, "📸").
+		OnClick(
+			ToggleHasPhoto(p.ID),
+		)
+	return app.Div().Class("list-item").ID(p.ID).Body(
 		app.H3().Body(
 			app.Text(p.Name),
-			app.Input().Type("checkbox").Checked(userHasPhoto).OnChange(ToggleHasPhoto(p.ID)),
 		),
 		app.H4().Body(
 			app.Text("Chapter "+p.Chapter),

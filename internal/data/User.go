@@ -33,7 +33,7 @@ func (ud *UserData) SetChapter(chapter string) {
 }
 
 /* Photos */
-func (ud *UserData) GetPhotoStatus(photo *types.Photo) types.PhotoStatus {
+func (ud *UserData) GetPhotoStatus(photo *types.Photo) types.Status {
 	if ud.HasPhoto(photo.ID) {
 		return types.TAKEN
 	}
@@ -69,6 +69,28 @@ func (ud *UserData) TogglePhoto(photoID string) {
 }
 
 /* Inventions */
+func (ud *UserData) GetInventionStatus(i *types.Invention) types.Status {
+	if ud.HasInvention(i.ID) {
+		return types.INVENTED
+	}
+
+	// If any of the required photos are missed
+	for _, v := range i.Photos {
+		p, err := GetPhoto(v.ID)
+		if err == nil && ud.GetPhotoStatus(&p) == types.MISSED {
+			return types.MISSED
+		}
+	}
+
+	if ud.Chapter < i.Chapter {
+		return types.UPCOMING
+	}
+	if ud.Chapter == i.Chapter {
+		return types.NEW
+	}
+	return types.AVAILABLE
+}
+
 func (ud *UserData) HasInvention(inventionID string) bool {
 	var current, ok = ud.Inventions[inventionID]
 	if !ok {
