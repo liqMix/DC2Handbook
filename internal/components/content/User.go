@@ -23,13 +23,15 @@ func (user *User) renderChapterSettings(userData *data.UserData) app.UI {
 	if err != nil {
 		currentChapter = chapters[0]
 	}
+	label := "Chapter " + currentChapter.ID + ": " + currentChapter.Name
 	return app.Div().Body(
-		app.H1().Text("Chapter: "+currentChapter.Name),
+		app.H1().Text(label),
 		app.Br(),
 		app.Select().
 			Body(
 				app.Range(chapters).Slice(func(i int) app.UI {
 					item := chapters[i]
+					item.Name = label
 					return item.ToOption(userData.Chapter)
 				}),
 			).
@@ -37,33 +39,47 @@ func (user *User) renderChapterSettings(userData *data.UserData) app.UI {
 	)
 }
 
-func (user *User) renderPhotoSettings(userData *data.UserData) app.UI {
-	photos := data.GetAppData().Photos
+func (user *User) renderPhotos(ud *data.UserData) app.UI {
 	return app.Div().Body(
 		app.H1().Text("Photos"),
-		app.Select().
-			Body(
-				app.Range(photos).Slice(func(i int) app.UI {
-					item := photos[i]
-					return item.ToOption(userData.Chapter)
-				}),
-			).
-			OnChange(handleChapterUpdate()),
+		app.Dl().Body(
+			app.Range(ud.Photos).Map(func(id string) app.UI {
+				photo, err := data.GetPhoto(id)
+				if err != nil || !ud.Photos[id] {
+					return nil
+				}
+				return app.Dd().Body(
+					app.Text(photo.Name),
+					app.Div().Class("clickable").Body(
+						app.Text("❌"),
+					).OnClick(func(ctx app.Context, e app.Event) {
+						ud.TogglePhoto(id)
+					}),
+				)
+			}),
+		),
 	)
 }
 
-func (user *User) renderInventionSettings(userData *data.UserData) app.UI {
-	inventions := data.GetAppData().Inventions
+func (user *User) renderInventions(ud *data.UserData) app.UI {
 	return app.Div().Body(
 		app.H1().Text("Inventions"),
-		app.Select().
-			Body(
-				app.Range(inventions).Slice(func(i int) app.UI {
-					item := inventions[i]
-					return item.ToOption(userData.Chapter)
-				}),
-			).
-			OnChange(handleChapterUpdate()),
+		app.Dl().Body(
+			app.Range(ud.Inventions).Map(func(id string) app.UI {
+				inv, err := data.GetInvention(id)
+				if err != nil || !ud.Inventions[id] {
+					return nil
+				}
+				return app.Dd().Body(
+					app.Text(inv.Name),
+					app.Div().Class("clickable").Body(
+						app.Text("❌"),
+					).OnClick(func(ctx app.Context, e app.Event) {
+						ud.ToggleInvention(id)
+					}),
+				)
+			}),
+		),
 	)
 }
 
@@ -71,7 +87,7 @@ func (user *User) Render() app.UI {
 	userData := data.GetUserData()
 	return app.Div().Body(
 		user.renderChapterSettings(userData),
-		user.renderPhotoSettings(userData),
-		user.renderInventionSettings(userData),
+		user.renderPhotos(userData),
+		user.renderInventions(userData),
 	)
 }

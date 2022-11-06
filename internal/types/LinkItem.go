@@ -7,23 +7,26 @@ import (
 type LinkItem struct {
 	app.Compo
 
+	Chapter string
+
 	label string
 	href  string
 	class string
 }
 
-func (l *LinkItem) Render() app.UI {
+func (l LinkItem) Render() app.UI {
 	return app.A().
 		Body(
-			app.Text(l.label),
+			app.Div().Body(app.Text(l.label)),
+			app.Div().Body(app.If(l.Chapter != "", app.Text(l.Chapter))),
 		).
 		Href(l.href).
-		Class(l.class)
+		Class(l.class + " sub-menu_link-item")
 }
 
-func (l *LinkItem) GetLabel() string {
+func (l LinkItem) GetLabel() string {
 	return l.label
 }
-func (l *LinkItem) IsSelected(selectedLabel string) bool {
+func (l LinkItem) IsSelected(selectedLabel string) bool {
 	return l.label == selectedLabel
 }

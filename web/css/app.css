@@ -1,6 +1,97 @@
+:root {
+  --background-color: linear-gradient(#2e343a, #1c1d1f);
+  --primary-color: rgba(255, 255, 255, 0.08);
+  --secondary-color: rgba(255, 255, 255, 0.2);
+  --margin-top: 3rem;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--primary-color);
+  width: 1.35rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  width: 1.35rem;
+}
+
+.goapp-app-info,
+.background {
+  background: var(--background-color);
+  height:102% !important;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.content {
+  overflow-y: auto;
+  margin-bottom: var(--margin-top);
+  height: 98%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.content_title {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-top);
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(65%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+
+.main-menu {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.main-menu_title {
+  z-index: -1;
+  transform: translateX(10%);
+  animation: 1.25s ease-out 0s 1 fromRight;
+  position: absolute;
+}
+
+.main-menu_options {
+  height: 100%;
+  overflow: hidden !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: large;
+}
+
+.main-menu_border {
+  z-index: 1;
+  background-color: var(--primary-color);
+  height:100%;
+  width: 1.35rem;
+}
+
+.main-menu_section {
+  margin-top: 5rem;
+}
+
 .list-item {
   background-color: transparent;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+
 .list-item:focus {
   background-color: darkkhaki 2s ease;
 }
@@ -8,6 +99,7 @@
 .list-item_descripton {
   display: block;
 }
+
 .list-item_sub {
   display: flex;
   flex-direction: row;
@@ -21,4 +113,95 @@
 .photo-taken {
   cursor: pointer;
   display: inline-block;
+}
+
+.sub-menu_title {
+  text-align: center;
+}
+
+.sub-menu_link-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+select {
+  appearance: none;
+  background-color: darkgrey;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: large;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  text-align-last: center;
+}
+
+.margin-top {
+  margin-top: var(--margin-top);
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.margin-bottom{
+  margin-bottom: var(--margin-top);
+}
+
+
+.fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.center {
+  margin: auto;
+}
+
+.vignette {
+  display: block;
+  overflow: hidden;
+  background-color: var(--primary-color);
+}
+
+.link {
+  width:100%;
+  display: block;
+  padding: 3px 0;
+  padding-left: 36px;
+  cursor: pointer;
+  transition: 0.2s all;
+  color: currentColor;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: deepskyblue;
+  transform: scale(1.2);
+}
+
+.link:active {
+  color: deepskyblue;
+  transform: scale(0.98);
+}
+
+.link-icon {
+  margin-right: 12px;
+}
+
+.link-update {
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+  transform-origin: bottom;
+}
+
+.link-update .link-icon {
+  margin-right: 3px;
 }

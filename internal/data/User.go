@@ -14,6 +14,7 @@ type UserData struct {
 	Photos     map[string]bool `json:"photos"`
 	Inventions map[string]bool `json:"inventions"`
 	Chapter    string          `json:"chapter"`
+	update     bool
 }
 
 var userData *UserData = &UserData{}
@@ -30,6 +31,12 @@ func InitUserData(ctx *app.Context) {
 func (ud *UserData) SetChapter(chapter string) {
 	ud.Chapter = chapter
 	ud.save()
+}
+
+/* Items */
+func (ud *UserData) GetItemStatus(item *types.Item) types.Status {
+	// TODO: give an inkling of a microthought to what this does
+	return types.NA
 }
 
 /* Photos */
@@ -120,6 +127,9 @@ func (ud *UserData) save() {
 	if err != nil {
 		app.Log(err)
 	}
+
+	ud.update = !ud.update
+	(*ud.context).SetState(types.E_USERUPDATE, ud.update)
 }
 
 func fetchUserData(ctx *app.Context) *UserData {

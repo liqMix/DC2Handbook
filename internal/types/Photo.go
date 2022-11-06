@@ -11,13 +11,16 @@ type Photo struct {
 	Memo         string
 }
 
-func (p *Photo) ToLinkItem() *LinkItem {
+func (p *Photo) ToLinkItem(s Status) LinkItem {
 	name := p.Name
+	class := s.ToClass()
 	if p.IsScoop {
 		name += " (S)"
 	}
-	return &LinkItem{
-		label: name,
-		href:  "/photos#" + p.ID,
+	return LinkItem{
+		label:   name,
+		href:    "/photos#" + p.ID,
+		class:   class,
+		Chapter: p.Chapter,
 	}
 }

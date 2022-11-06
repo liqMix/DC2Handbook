@@ -8,8 +8,8 @@ type Item struct {
 	Value    string
 }
 
-func (i *Item) ToLinkItem() *LinkItem {
-	return &LinkItem{
+func (i *Item) ToLinkItem(s Status) LinkItem {
+	return LinkItem{
 		label: i.Name,
 		href:  "/items#" + i.ID,
 	}

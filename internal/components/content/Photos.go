@@ -34,16 +34,18 @@ func renderPhoto(p *Photo, userData *UserData) app.UI {
 			ToggleHasPhoto(p.ID),
 		)
 	return app.Div().Class("list-item").ID(p.ID).Body(
-		app.H3().Body(
+		app.Hr(),
+		app.H3().Class("no-margin-top").Body(
 			app.Text(p.Name),
 		),
 		app.H4().Body(
 			app.Text("Chapter "+p.Chapter),
-			statusUI,
+			app.Br(),
+			app.Div().Class("clickable").Body(statusUI),
+			app.Br(),
 		),
 		app.Br(),
 		app.Text(p.Location),
 		app.Img().Src(p.ImageURL),
-		app.Hr(),
 	)
 }

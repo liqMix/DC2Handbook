@@ -1,6 +1,8 @@
 package content
 
 import (
+	"strconv"
+
 	"github.com/liqMix/DC2Photobook/internal/data"
 	. "github.com/liqMix/DC2Photobook/internal/data"
 	. "github.com/liqMix/DC2Photobook/internal/types"
@@ -44,39 +46,52 @@ func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 		app.H4().Body(
 			app.Text("Chapter "+string(inv.Chapter)),
 			app.Br(),
-			statusUI,
+			app.Div().Class("clickable").Body(statusUI),
 			app.Br(),
 		),
-		app.Div().Class("list-item_sub").Body(
-			app.Range(inv.Photos).Slice(func(i int) app.UI {
-				return renderInventionPhoto(&inv.Photos[i])
-			}),
+		app.H4().Body(
+			app.Text("Photos"),
+			app.Div().Class("list-item_sub").Body(
+				app.Range(inv.Photos).Slice(func(i int) app.UI {
+					photo, err := GetPhoto(inv.Photos[i].ID)
+					if err != nil {
+						return nil
+					}
+					return renderInventionPhoto(&photo)
+				}),
+			),
+		),
+		app.H4().Body(
+			app.Text("Recipe"),
+			app.Div().Class("list-item_sub").Body(
+				app.Range(inv.Recipe).Slice(func(i int) app.UI {
+					return renderInventionRecipeItem(inv.Recipe[i])
+				}),
+			),
 		),
 		app.Br(),
 		app.Div().Class("list-item_description").Body(
 			app.Text(inv.Description),
-		),
-		app.Div().Class("list-item_sub").Body(
-			app.Range(inv.Recipe).Slice(func(i int) app.UI {
-				return renderInventionRecipeItem(&inv.Recipe[i])
-			}),
 		),
 		app.Hr(),
 	)
 }
 
 func renderInventionPhoto(p *Photo) app.UI {
-	return app.A().Class("list-item_sub_item").Body(
+	class := GetUserData().GetPhotoStatus(p).ToClass()
+	return app.A().Class("list-item_sub_item "+class).Body(
 		app.Text(p.Name),
 		app.Br(),
 	).Href("/photos#" + p.ID)
 }
 
-func renderInventionRecipeItem(ri *RecipeItem) app.UI {
+func renderInventionRecipeItem(ri RecipeItem) app.UI {
+	item, err := GetItem(ri.ItemID)
+	if err != nil {
+		return nil
+	}
 	return app.A().Class("list-item_sub_item").Body(
-		// app.Text(ri.Item),
-		// app.Text(":"+string(ri.Count)),
+		app.Text(item.Name+" x "+strconv.Itoa(ri.Count)),
 		app.Br(),
-	)
-	// Href("/items#" + ri.Item.ID)
+	).Href("/items#" + ri.ItemID)
 }

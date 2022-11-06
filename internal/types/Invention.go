@@ -1,8 +1,8 @@
 package types
 
 type RecipeItem struct {
-	Item  *Item
-	Count uint8
+	ItemID string
+	Count  int
 }
 
 type Invention struct {
@@ -14,9 +14,12 @@ type Invention struct {
 	Recipe      []RecipeItem
 }
 
-func (i *Invention) ToLinkItem() *LinkItem {
-	return &LinkItem{
-		label: i.Name,
-		href:  "/inventions#" + i.ID,
+func (i *Invention) ToLinkItem(s Status) LinkItem {
+	class := s.ToClass()
+	return LinkItem{
+		label:   i.Name,
+		href:    "/inventions#" + i.ID,
+		class:   class,
+		Chapter: i.Chapter,
 	}
 }

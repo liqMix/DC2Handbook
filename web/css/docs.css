@@ -23,10 +23,6 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.goapp-app-info,
-.background {
-  background: linear-gradient(#2e343a, #1c1d1f);
-}
 
 .app-title,
 .h1,
@@ -62,22 +58,12 @@ h1 {
   letter-spacing: 3px;
 }
 
-h1 {
-  padding-top: 18px;
-}
-
 .h2,
 h2 {
   font-size: 18px;
   letter-spacing: 2px;
 }
 
-.header-separator,
-h1,
-h2 {
-  padding-bottom: 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
 
 .h3,
 h3 {
@@ -173,12 +159,6 @@ input[type="password"]:focus {
   border-left: 1px solid deepskyblue;
 }
 
-.fill {
-  height: 100%;
-  width: 100%;
-  max-height: 100%;
-  max-width: 100%;
-}
 
 .header {
   height: 78px;
@@ -189,7 +169,6 @@ input[type="password"]:focus {
 }
 
 .content {
-  height: calc(100% - 78px - 12px);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -322,13 +301,6 @@ h2 {
   margin-left: auto;
 }
 
-.vignette {
-  display: block;
-  border-radius: 18px;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.035);
-}
-
 .magnify {
   cursor: pointer;
   transition: 0.2s all;
@@ -405,42 +377,6 @@ h2 {
   }
 }
 
-/* -----------------------------------------------------------------------------
-// Link
-------------------------------------------------------------------------------*/
-.link {
-  display: block;
-  padding: 3px 0;
-  cursor: pointer;
-  transition: 0.2s all;
-  color: currentColor;
-}
-
-.link:hover {
-  color: deepskyblue;
-  transform: scale(1.2);
-}
-
-.link:active {
-  color: deepskyblue;
-  transform: scale(0.98);
-}
-
-.link-icon {
-  margin-right: 12px;
-}
-
-.link-update {
-  animation-timing-function: ease;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: bounce;
-  transform-origin: bottom;
-}
-
-.link-update .link-icon {
-  margin-right: 3px;
-}
 
 /* -----------------------------------------------------------------------------
 // Page

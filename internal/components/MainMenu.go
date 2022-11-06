@@ -5,8 +5,6 @@ import (
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 )
 
-const stylePrefix string = "goapp-"
-
 type MainMenu struct {
 	app.Compo
 
@@ -14,7 +12,7 @@ type MainMenu struct {
 }
 
 func (m *MainMenu) renderOption(path, label string) app.UI {
-	className := "link heading fit"
+	className := "link"
 	if path == m.selected {
 		className += " vignette"
 	}
@@ -25,16 +23,12 @@ func (m *MainMenu) renderOption(path, label string) app.UI {
 
 func (m *MainMenu) renderTitle() app.UI {
 	return app.Div().Body(
-		app.Header().Body(
-			app.A().Body(
-				app.Text("DC2 Handbook"),
-			).Href("/").Class("app-title"),
-		),
-	).Class(stylePrefix + "stack header hspace-out")
+		app.Img().Src("/web/img/logo.png"),
+	).Class("main-menu_title")
 }
 
 func (m *MainMenu) renderHomeOptions() app.UI {
-	return app.Div().Class("vspace-top").Body(
+	return app.Div().Class("main-menu_section").Body(
 		m.renderOption("/", "Home"),
 		m.renderOption("/about", "About"),
 		m.renderOption("/user", "User"),
@@ -42,7 +36,7 @@ func (m *MainMenu) renderHomeOptions() app.UI {
 }
 
 func (m *MainMenu) renderAppOptions() app.UI {
-	return app.Div().Class("vspace-top").Body(
+	return app.Div().Class("main-menu_section").Body(
 		m.renderOption("/items", "Items"),
 		m.renderOption("/photos", "Photos"),
 		m.renderOption("/inventions", "Inventions"),
@@ -54,8 +48,8 @@ func (m *MainMenu) renderOptions() app.UI {
 		app.Div().Body(
 			m.renderHomeOptions(),
 			m.renderAppOptions(),
-		).Class("hspace-out"),
-	).Class("content")
+		).Class(),
+	).Class("content main-menu_options")
 }
 
 func (m *MainMenu) Render() app.UI {
@@ -63,5 +57,6 @@ func (m *MainMenu) Render() app.UI {
 	return app.Div().Body(
 		m.renderTitle(),
 		m.renderOptions(),
-	).Class("fill unselectable")
+		app.Div().Class("main-menu_border"),
+	).Class("main-menu")
 }

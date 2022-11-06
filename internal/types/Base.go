@@ -5,7 +5,7 @@ import (
 )
 
 type IBase interface {
-	ToLinkItem() *LinkItem
+	ToLinkItem(s Status) LinkItem
 	ToOption(selectedID string) app.UI
 }
 
@@ -15,10 +15,11 @@ type Base struct {
 	Chapter string
 }
 
-func (b *Base) ToLinkItem() *LinkItem {
+func (b *Base) ToLinkItem(s Status) *LinkItem {
 	return &LinkItem{
 		label: b.Name,
 		href:  b.ID,
+		class: s.ToClass(),
 	}
 }
 

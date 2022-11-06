@@ -1,8 +1,6 @@
 package components
 
 import (
-	"strings"
-
 	"github.com/liqMix/DC2Photobook/internal/components/content"
 	err "github.com/liqMix/DC2Photobook/internal/components/error"
 	"github.com/liqMix/DC2Photobook/internal/utils"
@@ -15,13 +13,13 @@ type Content struct {
 
 func (c *Content) Render() app.UI {
 	path := utils.GetPath()
-	rootTitle := strings.Replace(path.Root, "/", "", 1)
+	rootTitle := path.Title
 	return app.Div().Class("content").Body(
-		app.H1().Class("title fit center").Body(
+		app.H1().Class("content_title").Body(
 			app.Text(rootTitle+"\n"),
 			app.Text(path.Sub+"\n"),
 		),
-		app.Article().Body(
+		app.Article().Class("hspace-out").Body(
 			app.If(path.Root == "/photos",
 				&content.Photos{},
 			).ElseIf(path.Root == "/items",

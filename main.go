@@ -6,6 +6,7 @@ import (
 
 	. "github.com/liqMix/DC2Photobook/internal/components"
 	"github.com/liqMix/DC2Photobook/internal/data"
+	"github.com/liqMix/DC2Photobook/internal/types"
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 	"github.com/maxence-charriere/go-app/v9/pkg/ui"
 )
@@ -17,14 +18,10 @@ type Application struct {
 
 	loaded       bool
 	currentFocus string
+	rerender     bool
 	Menu         MainMenu
 	Submenu      Submenu
 	Content      Content
-}
-
-func (a *Application) OnNav(ctx app.Context) {
-	a.Submenu.HandleNavChange()
-	// a.focusElement(ctx)
 }
 
 // func (a *Application) focusElement(ctx app.Context) {
@@ -43,12 +40,13 @@ func (a *Application) unfocusElement(ctx app.Context, e app.Event) {
 }
 
 func (a *Application) OnMount(ctx app.Context) {
-	app.Log("mounted")
-	ctx.SetState("loaded", false)
+	ctx.SetState(string(types.E_LOADED), false)
 	data.InitAppData(&ctx)
 	data.InitUserData(&ctx)
 	app.Window().AddEventListener("click", a.unfocusElement)
-	ctx.ObserveState("loaded").
+
+	// When data has finished loading from JSON
+	ctx.ObserveState(string(types.E_LOADED)).
 		While(func() bool {
 			return !a.loaded
 		}).
@@ -56,6 +54,18 @@ func (a *Application) OnMount(ctx app.Context) {
 			a.loaded = data.GetAppData() != nil
 		}).
 		Value(&a.loaded)
+
+	// When user is saved
+	ctx.ObserveState(types.E_USERUPDATE).
+		OnChange(func() {
+			a.Submenu.RefreshSubItems()
+		}).
+		Value(&a.rerender)
+}
+
+func (a *Application) OnNav(ctx app.Context) {
+	a.Submenu.RefreshSubItems()
+	// a.focusElement(ctx)
 }
 
 func (a *Application) Render() app.UI {
@@ -71,7 +81,6 @@ func (a *Application) Render() app.UI {
 			app.If(!a.loaded,
 				ui.Loader().Loading(true),
 			).Else(
-				app.Div().Class(stylePrefix+"stack header"),
 				a.Content.Render(),
 			),
 		)

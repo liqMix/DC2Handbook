@@ -11,22 +11,41 @@ type Status string
 
 const (
 	AVAILABLE Status = "AVAILABLE"
-	MISSED           = "MISSED"
-	NEW              = "NEW"
-	TAKEN            = "TAKEN"
-	INVENTED         = "CREATED"
-	UPCOMING         = "UPCOMING"
+	MISSED    Status = "MISSED"
+	NEW       Status = "NEW"
+	TAKEN     Status = "TAKEN"
+	INVENTED  Status = "INVENTED"
+	UPCOMING  Status = "UPCOMING"
+	NA        Status = "NA"
 )
 
-func (s Status) ToUI(userChapter string, photoChapter string, icon string) app.HTMLH5 {
-	text := string(s)
-	class := "moderate-warn"
+func StatusFromString(str string) Status {
+	stringMap := map[string]Status{
+		"AVAILABLE": AVAILABLE,
+		"MISSED":    MISSED,
+		"NEW":       NEW,
+		"TAKEN":     TAKEN,
+		"INVENTED":  INVENTED,
+		"UPCOMING":  UPCOMING,
+	}
 
+	status, ok := stringMap[str]
+	if ok {
+		return status
+	}
+	return NA
+}
+
+func (s Status) ToClass() string {
+	class := ""
 	switch s {
+	case AVAILABLE:
+		class = "moderate-warn"
 	case NEW:
 		class = "warn"
 
 	case TAKEN:
+		class = "success"
 	case INVENTED:
 		class = "success"
 
@@ -34,6 +53,16 @@ func (s Status) ToUI(userChapter string, photoChapter string, icon string) app.H
 		class = "error"
 
 	case UPCOMING:
+		class = "deemphasize"
+	}
+	return class
+}
+
+func (s Status) ToUI(userChapter string, photoChapter string, icon string) app.HTMLH5 {
+	text := string(s)
+	class := s.ToClass()
+
+	if s == UPCOMING {
 		ucInt, err := strconv.Atoi(userChapter)
 		if err != nil {
 			ucInt = 0
@@ -43,14 +72,34 @@ func (s Status) ToUI(userChapter string, photoChapter string, icon string) app.H
 			pcInt = 0
 		}
 		text = fmt.Sprintf("IN %v CHAPTER(S)", pcInt-ucInt)
-		class = "deemphasize"
-
-	case AVAILABLE:
-	default:
-		// Fall through to return below
 	}
+
 	return app.H5().Body(
 		app.Text(icon),
 		app.Text(text),
 	).Class("status " + class)
+}
+
+func (s Status) toSelectItem() SelectItem {
+	si := NewSelectItem(
+		string(s),
+		s,
+		s.ToClass(),
+	)
+	return si
+}
+
+func CreateStatusSelect(selected Status) app.HTMLSelect {
+	return CreateSelectInput(
+		[]SelectItem{
+			NewSelectItem("ALL", string(NA), ""),
+			NEW.toSelectItem(),
+			AVAILABLE.toSelectItem(),
+			UPCOMING.toSelectItem(),
+			MISSED.toSelectItem(),
+			TAKEN.toSelectItem(),
+			INVENTED.toSelectItem(),
+		},
+		selected,
+	)
 }

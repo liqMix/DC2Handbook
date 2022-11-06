@@ -37,7 +37,7 @@ func InitAppData(ctx *app.Context) {
 	appData.initPhotos()
 	appData.initChapters()
 	appData.initItems()
-	(*ctx).SetState("loaded", true)
+	(*ctx).SetState(string(E_LOADED), true)
 }
 
 func (ad *AppData) initChapters() {
