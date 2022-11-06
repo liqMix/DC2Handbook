@@ -128,8 +128,6 @@ select {
   appearance: none;
   background-color: darkgrey;
   border: none;
-  padding: 0 1em 0 0;
-  margin: 0;
   width: 100%;
   font-family: inherit;
   font-size: large;
@@ -137,6 +135,7 @@ select {
   line-height: inherit;
   outline: none;
   text-align-last: center;
+  padding-bottom: 3px;
 }
 
 .margin-top {
@@ -204,4 +203,13 @@ select {
 
 .link-update .link-icon {
   margin-right: 3px;
+}
+
+.user_sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_section {
+  margin-bottom: var(--margin-top)
 }

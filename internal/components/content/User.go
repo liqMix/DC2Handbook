@@ -23,15 +23,14 @@ func (user *User) renderChapterSettings(userData *data.UserData) app.UI {
 	if err != nil {
 		currentChapter = chapters[0]
 	}
-	label := "Chapter " + currentChapter.ID + ": " + currentChapter.Name
-	return app.Div().Body(
-		app.H1().Text(label),
+	return app.Div().Class("user_section").Body(
+		app.H1().Text(currentChapter.ToLabel()),
 		app.Br(),
 		app.Select().
 			Body(
 				app.Range(chapters).Slice(func(i int) app.UI {
 					item := chapters[i]
-					item.Name = label
+					item.Name = item.ToLabel()
 					return item.ToOption(userData.Chapter)
 				}),
 			).
@@ -85,7 +84,7 @@ func (user *User) renderInventions(ud *data.UserData) app.UI {
 
 func (user *User) Render() app.UI {
 	userData := data.GetUserData()
-	return app.Div().Body(
+	return app.Div().Class("user_sections").Body(
 		user.renderChapterSettings(userData),
 		user.renderPhotos(userData),
 		user.renderInventions(userData),
