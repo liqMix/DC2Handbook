@@ -24,10 +24,11 @@
 .clickable {
   cursor: pointer;
 }
-.clickable:hover {
+
+/* .clickable:hover {
   color: deepskyblue;
   transform: scale(1.1);
-}
+} */
 
 .content {
   overflow-y: auto;
@@ -53,7 +54,6 @@
     transform: translateX(10%);
   }
 }
-
 
 .main-menu {
   display: flex;
@@ -100,6 +100,12 @@
   background-color: darkkhaki 2s ease;
 }
 
+.list-item_header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .list-item_descripton {
   display: block;
 }

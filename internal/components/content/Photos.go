@@ -33,10 +33,21 @@ func renderPhoto(p *Photo, userData *UserData) app.UI {
 		OnClick(
 			ToggleHasPhoto(p.ID),
 		)
+
 	return app.Div().Class("list-item").ID(p.ID).Body(
 		app.Hr(),
-		app.H3().Class("no-margin-top").Body(
-			app.Text(p.Name),
+		app.H2().Class("list-item_header no-margin-top").Body(
+			app.Div().Body(app.Text(p.Name)),
+			app.Div().Style("display", "flex").Body(
+				app.If(
+					p.IsScoop,
+					app.Div().Body(app.Text("🥄")).Title("Scoop"),
+				),
+				app.If(
+					p.Missable,
+					app.Div().Body(app.Text("🙈")).Title("Missable"),
+				),
+			),
 		),
 		app.H4().Body(
 			app.Text("Chapter "+p.Chapter),
