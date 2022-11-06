@@ -106,7 +106,7 @@ func (s *Submenu) renderHeader() app.UI {
 func (s *Submenu) renderMenuItems() app.UI {
 	if len(s.subMenuItems) == 0 {
 		return app.Dl().Body(
-			app.Dd().Class("sub-menu_link-item", "deemphasize").Body(
+			app.Dd().Class("sub-menu_link-item deemphasize").Body(
 				app.Text("Nothing here!"),
 			),
 		)
@@ -118,7 +118,7 @@ func (s *Submenu) renderMenuItems() app.UI {
 			if menuItem == nil {
 				return nil
 			}
-			className := ""
+			className := "clickable"
 			if menuItem.IsSelected(s.selected) {
 				className = "vignette"
 			}

@@ -24,6 +24,10 @@
 .clickable {
   cursor: pointer;
 }
+.clickable:hover {
+  color: deepskyblue;
+  transform: scale(1.1);
+}
 
 .content {
   overflow-y: auto;
