@@ -2,6 +2,7 @@ package components
 
 import (
 	"sort"
+	"strconv"
 
 	. "github.com/liqMix/DC2Photobook/internal/data"
 	. "github.com/liqMix/DC2Photobook/internal/types"
@@ -14,6 +15,7 @@ type Submenu struct {
 
 	sortBy         string
 	desc           bool
+	hideTaken      bool
 	selected       string
 	subMenuItems   []LinkItem
 	selectedStatus Status
@@ -35,8 +37,11 @@ func (s *Submenu) RefreshSubItems() {
 		for i := range appData.Photos {
 			photo := &appData.Photos[i]
 			pStatus := userData.GetPhotoStatus(photo)
+			hasP := userData.HasPhoto(photo.ID)
 			if !hasSelectedStatus || pStatus == s.selectedStatus {
-				s.append(photo.ToLinkItem(pStatus))
+				if !s.hideTaken || !hasP {
+					s.append(photo.ToLinkItem(pStatus))
+				}
 			}
 		}
 
@@ -44,8 +49,11 @@ func (s *Submenu) RefreshSubItems() {
 		for i := range appData.Inventions {
 			inv := &appData.Inventions[i]
 			iStatus := userData.GetInventionStatus(inv)
+			hasI := userData.HasInvention(inv.ID)
 			if !hasSelectedStatus || iStatus == s.selectedStatus {
-				s.append(inv.ToLinkItem(iStatus))
+				if !s.hideTaken || !hasI {
+					s.append(inv.ToLinkItem(iStatus))
+				}
 			}
 		}
 
@@ -133,12 +141,26 @@ func (s *Submenu) selectSubMenuItem(item LinkItem) app.EventHandler {
 	}
 }
 
+func (s *Submenu) renderHideButton() app.UI {
+	show := "HIDE"
+	if s.hideTaken {
+		show = "SHOW"
+	}
+	return app.Div().Class("sub-menu_select margin-bottom").Body(
+		app.Button().Class("button toggled-" + strconv.FormatBool(s.hideTaken)).
+			Body(app.Text(show + " TAKEN")).
+			OnClick(func(ctx app.Context, e app.Event) {
+				s.hideTaken = !s.hideTaken
+				s.RefreshSubItems()
+			}),
+	)
+}
 func (s *Submenu) renderMenuContainer() app.UI {
 	return app.Div().Class("vspace-top").Body(
 		app.Div().Class("godoc-index").Body(
 			app.Div().Class("manual-nav").Body(
 				CreateStatusSelect(s.selectedStatus).
-					Class("sub-menu_select margin-bottom").
+					Class("sub-menu_select").
 					OnChange(func(ctx app.Context, e app.Event) {
 						status := StatusFromString(ctx.JSSrc().Get("value").String())
 						s.desc = false
@@ -146,6 +168,7 @@ func (s *Submenu) renderMenuContainer() app.UI {
 						s.selectedStatus = status
 						s.RefreshSubItems()
 					}),
+				s.renderHideButton(),
 				app.Div().Class("margin-bottom").Body(
 					app.Dd().Class("sub-menu_link-item").Body(
 						app.Div().Body(app.Text("Name")).Class("clickable").

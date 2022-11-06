@@ -41,11 +41,11 @@ func renderPhoto(p *Photo, userData *UserData) app.UI {
 			app.Div().Style("display", "flex").Body(
 				app.If(
 					p.IsScoop,
-					app.Div().Body(app.Text("🥄")).Title("Scoop"),
+					app.Div().Class("icon").Body(app.Text("🥄")).Title("Scoop"),
 				),
 				app.If(
 					p.Missable,
-					app.Div().Body(app.Text("🙈")).Title("Missable"),
+					app.Div().Class("icon").Body(app.Text("🙈")).Title("Missable"),
 				),
 			),
 		),

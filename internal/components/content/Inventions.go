@@ -41,7 +41,7 @@ func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 		app.Div().Class("list-item_header no-margin-top").
 			Body(
 				app.Div().Body(
-					app.H2().Body(
+					app.H2().Class("no-margin-top").Body(
 						app.Text(inv.Name),
 					),
 					app.H4().Class("text-small").Body(
@@ -52,7 +52,7 @@ func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 					),
 				),
 				app.Div().Class("list-item_sub_section text-small").Body(
-					app.H3().Body(app.Text("Photos")),
+					app.H3().Class("no-margin-top").Body(app.Text("Photos")),
 					app.Dl().Class("list-item_sub").Body(
 						app.Range(inv.Photos).Slice(func(i int) app.UI {
 							photo, err := GetPhoto(inv.Photos[i].ID)
@@ -62,7 +62,7 @@ func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 							return renderInventionPhoto(&photo)
 						}),
 					),
-					app.H3().Body(app.Text("Recipe")),
+					app.H3().Class("no-margin-top").Body(app.Text("Recipe")),
 					app.Dl().Class("list-item_sub").Body(
 						app.Range(inv.Recipe).Slice(func(i int) app.UI {
 							return renderInventionRecipeItem(inv.Recipe[i])
@@ -81,7 +81,7 @@ func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 func renderInventionPhoto(p *Photo) app.UI {
 	class := GetUserData().GetPhotoStatus(p).ToClass()
 	return app.Dd().Body(
-		app.A().Class("list-item_sub_item "+class).Body(
+		app.A().Class("list-item_sub_item clickable "+class).Body(
 			app.Text(p.Name),
 			app.Br(),
 		).Href("/photos#" + p.ID))
@@ -93,7 +93,7 @@ func renderInventionRecipeItem(ri RecipeItem) app.UI {
 		return nil
 	}
 	return app.Dd().Body(
-		app.A().Class("list-item_sub_item").Body(
+		app.A().Class("list-item_sub_item clickable").Body(
 			app.Text(item.Name+" x "+strconv.Itoa(ri.Count)),
 			app.Br(),
 		).Href("/items#" + ri.ItemID),

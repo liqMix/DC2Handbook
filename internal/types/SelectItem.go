@@ -31,7 +31,7 @@ func (sl SelectItem) ToOption(selected interface{}) app.HTMLOption {
 }
 
 func CreateSelectInput(items []SelectItem, selected interface{}) app.HTMLSelect {
-	return app.Select().Body(
+	return app.Select().Class().Body(
 		app.Range(items).Slice(func(i int) app.UI {
 			return items[i].ToOption(selected)
 		}),
