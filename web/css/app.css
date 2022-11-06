@@ -257,6 +257,27 @@ select {
 .toggled-false {
   background-color: var(--primary-color)
 }
+
 .toggled-true {
   background-color: var(--secondary-color)
+}
+
+.error {
+  color: #f06372 !important;
+}
+
+.warn {
+  color: yellow !important;
+}
+
+.moderate-warn {
+  color: lightyellow !important;
+}
+
+.success {
+  color: lightgreen !important;
+}
+
+.deemphasize {
+  color: grey !important
 }

@@ -27,6 +27,13 @@ func InitUserData(ctx *app.Context) {
 	userData = fetchUserData(ctx)
 }
 
+func ResetUserData(ctx *app.Context) {
+	userData = &UserData{
+		context: ctx,
+	}
+	userData.save()
+}
+
 /* Chapter */
 func (ud *UserData) SetChapter(chapter string) {
 	ud.Chapter = chapter

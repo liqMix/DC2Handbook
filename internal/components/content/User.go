@@ -82,11 +82,25 @@ func (user *User) renderInventions(ud *data.UserData) app.UI {
 	)
 }
 
+func (user *User) renderReset() app.UI {
+	return app.Div().Body(
+		app.H1().Text("Reset"),
+		app.H4().Class("no-margin-top").Body(
+			app.I().Class("warn").Text("Good-bye, Shingala..."),
+		),
+		app.Button().Class("button toggle-false").Body(
+			app.Text("Reset all user data"),
+		).OnClick(func(ctx app.Context, e app.Event) {
+			data.ResetUserData(&ctx)
+		}),
+	)
+}
 func (user *User) Render() app.UI {
 	userData := data.GetUserData()
 	return app.Div().Class("user_sections").Body(
 		user.renderChapterSettings(userData),
 		user.renderPhotos(userData),
 		user.renderInventions(userData),
+		user.renderReset(),
 	)
 }
