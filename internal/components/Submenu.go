@@ -97,6 +97,7 @@ func (s *Submenu) selectSort(newSort string) {
 	}
 	s.RefreshSubItems()
 }
+
 func (s *Submenu) renderHeader() app.UI {
 	return app.Header().Body(
 		app.Text(utils.GetPath().Title),
@@ -118,12 +119,9 @@ func (s *Submenu) renderMenuItems() app.UI {
 			if menuItem == nil {
 				return nil
 			}
-			className := "clickable"
-			if menuItem.IsSelected(s.selected) {
-				className = "vignette"
-			}
-			return app.Dd().Class(className).Body(
-				s.subMenuItems[i].Render(),
+
+			return app.Dd().Class().Body(
+				s.subMenuItems[i].Render(s.selected),
 			).OnClick(s.selectSubMenuItem(*menuItem))
 		}),
 	)
@@ -148,7 +146,7 @@ func (s *Submenu) renderMenuContainer() app.UI {
 						s.selectedStatus = status
 						s.RefreshSubItems()
 					}),
-				app.Div().Class("hspace-out margin-bottom").Body(
+				app.Div().Class("margin-bottom").Body(
 					app.Dd().Class("sub-menu_link-item").Body(
 						app.Div().Body(app.Text("Name")).Class("clickable").
 							OnClick(func(ctx app.Context, e app.Event) {

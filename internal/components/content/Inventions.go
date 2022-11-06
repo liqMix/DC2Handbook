@@ -38,37 +38,38 @@ func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 		)
 
 	return app.Div().Class("list-item").ID(inv.ID).Body(
-		app.H3().
+		app.Div().Class("list-item_header no-margin-top").
 			Body(
-				app.Text(inv.Name),
-				app.Br(),
+				app.Div().Body(
+					app.H2().Body(
+						app.Text(inv.Name),
+					),
+					app.H4().Class("text-small").Body(
+						app.Text("Chapter "+string(inv.Chapter)),
+					),
+					app.H5().Class("clickable").Body(
+						statusUI,
+					),
+				),
+				app.Div().Class("list-item_sub_section text-small").Body(
+					app.H3().Body(app.Text("Photos")),
+					app.Dl().Class("list-item_sub").Body(
+						app.Range(inv.Photos).Slice(func(i int) app.UI {
+							photo, err := GetPhoto(inv.Photos[i].ID)
+							if err != nil {
+								return nil
+							}
+							return renderInventionPhoto(&photo)
+						}),
+					),
+					app.H3().Body(app.Text("Recipe")),
+					app.Dl().Class("list-item_sub").Body(
+						app.Range(inv.Recipe).Slice(func(i int) app.UI {
+							return renderInventionRecipeItem(inv.Recipe[i])
+						}),
+					),
+				),
 			),
-		app.H4().Body(
-			app.Text("Chapter "+string(inv.Chapter)),
-			app.Br(),
-			app.Div().Class("clickable").Body(statusUI),
-			app.Br(),
-		),
-		app.H4().Body(
-			app.Text("Photos"),
-			app.Div().Class("list-item_sub").Body(
-				app.Range(inv.Photos).Slice(func(i int) app.UI {
-					photo, err := GetPhoto(inv.Photos[i].ID)
-					if err != nil {
-						return nil
-					}
-					return renderInventionPhoto(&photo)
-				}),
-			),
-		),
-		app.H4().Body(
-			app.Text("Recipe"),
-			app.Div().Class("list-item_sub").Body(
-				app.Range(inv.Recipe).Slice(func(i int) app.UI {
-					return renderInventionRecipeItem(inv.Recipe[i])
-				}),
-			),
-		),
 		app.Br(),
 		app.Div().Class("list-item_description").Body(
 			app.Text(inv.Description),
@@ -79,10 +80,11 @@ func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 
 func renderInventionPhoto(p *Photo) app.UI {
 	class := GetUserData().GetPhotoStatus(p).ToClass()
-	return app.A().Class("list-item_sub_item "+class).Body(
-		app.Text(p.Name),
-		app.Br(),
-	).Href("/photos#" + p.ID)
+	return app.Dd().Body(
+		app.A().Class("list-item_sub_item "+class).Body(
+			app.Text(p.Name),
+			app.Br(),
+		).Href("/photos#" + p.ID))
 }
 
 func renderInventionRecipeItem(ri RecipeItem) app.UI {
@@ -90,8 +92,10 @@ func renderInventionRecipeItem(ri RecipeItem) app.UI {
 	if err != nil {
 		return nil
 	}
-	return app.A().Class("list-item_sub_item").Body(
-		app.Text(item.Name+" x "+strconv.Itoa(ri.Count)),
-		app.Br(),
-	).Href("/items#" + ri.ItemID)
+	return app.Dd().Body(
+		app.A().Class("list-item_sub_item").Body(
+			app.Text(item.Name+" x "+strconv.Itoa(ri.Count)),
+			app.Br(),
+		).Href("/items#" + ri.ItemID),
+	)
 }

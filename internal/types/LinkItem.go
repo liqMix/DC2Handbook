@@ -14,14 +14,18 @@ type LinkItem struct {
 	class string
 }
 
-func (l LinkItem) Render() app.UI {
+func (l LinkItem) Render(selected string) app.UI {
+	class := " sub-menu_link-item clickable"
+	if l.IsSelected(selected) {
+		class += " vignette"
+	}
 	return app.A().
 		Body(
 			app.Div().Body(app.Text(l.label)),
 			app.Div().Body(app.If(l.Chapter != "", app.Text(l.Chapter))),
 		).
 		Href(l.href).
-		Class(l.class + " sub-menu_link-item")
+		Class(l.class + class)
 }
 
 func (l LinkItem) GetLabel() string {
