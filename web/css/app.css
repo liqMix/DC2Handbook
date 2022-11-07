@@ -1,7 +1,7 @@
 :root {
   --background-color: linear-gradient(#2e343a, #1c1d1f);
-  --primary-color: rgba(255, 255, 255, 0.08);
-  --secondary-color: rgba(255, 255, 255, 0.2);
+  --primary-color: rgb(80, 80, 80);
+  --secondary-color: rgb(100, 100, 100);
   --margin-top: 3rem;
 }
 
@@ -21,6 +21,9 @@
   height:102% !important;
 }
 
+body {
+  scrollbar-color: var(--primary-color) var(--secondary_color);
+}
 .clickable {
   cursor: pointer;
 }

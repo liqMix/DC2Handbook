@@ -15,14 +15,6 @@ body {
   scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.08);
 }
 
-::-webkit-scrollbar {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 
 .app-title,
 .h1,
