@@ -1,18 +1,20 @@
 # DC2Handbook
+
 A utility for keeping track of and guiding progress for Dark Cloud 2
 
+## Development Plan
 
-# Development Plan
 1. Build out the features I'd want to use for a playthrough.
 2. Begin playthrough using the utility.
 3. Capture images of relevant entities (items, photos, etc)
 
-# Development Roadmap
+## Development Roadmap
 
-## Done
+### Done
+
 - nothing
 
-## In-Progress
+### In-Progress
 
 - UI
 - User Data
@@ -20,7 +22,8 @@ A utility for keeping track of and guiding progress for Dark Cloud 2
 - Photos
 - Items
 
-## Planned
+### Planned
+
 - Images for all items + inventions + photos
 - Villagers
 - Weapon
