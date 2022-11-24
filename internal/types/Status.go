@@ -37,31 +37,34 @@ func StatusFromString(str string) Status {
 }
 
 func (s Status) ToClass() string {
-	class := ""
+	class := "status "
 	switch s {
 	case AVAILABLE:
-		class = "moderate-warn"
+		class += "moderate-warn"
 	case NEW:
-		class = "warn"
+		class += "warn"
 
 	case TAKEN:
-		class = "success"
+		class += "success"
 	case INVENTED:
-		class = "success"
+		class += "success"
 
 	case MISSED:
-		class = "error"
+		class += "error"
 
 	case UPCOMING:
-		class = "deemphasize"
+		class += "deemphasize"
 	}
 	return class
 }
 
-func (s Status) ToUI(userChapter string, photoChapter string, icon string) app.HTMLH5 {
+func (s Status) ToUI(userChapter string, photoChapter string, icon string, clickable bool) app.HTMLH5 {
 	text := string(s)
 	class := s.ToClass()
 
+	if clickable {
+		class += " clickable"
+	}
 	if s == UPCOMING {
 		ucInt, err := strconv.Atoi(userChapter)
 		if err != nil {
@@ -77,7 +80,7 @@ func (s Status) ToUI(userChapter string, photoChapter string, icon string) app.H
 	return app.H5().Body(
 		app.Text(icon),
 		app.Text(text),
-	).Class("status " + class)
+	).Class(class)
 }
 
 func (s Status) toSelectItem() SelectItem {

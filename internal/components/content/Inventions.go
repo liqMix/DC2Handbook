@@ -32,38 +32,40 @@ func ToggleHasInvention(iID string) app.EventHandler {
 
 func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 	statusUI := userData.GetInventionStatus(inv).
-		ToUI(userData.Chapter, inv.Chapter, "🔧").
+		ToUI(userData.Chapter, inv.Chapter, "🔧", true).
 		OnClick(
 			ToggleHasInvention(inv.ID),
 		)
 
 	return app.Div().Class("list-item").ID(inv.ID).Body(
-		app.Div().Class("list-item_header no-margin-top").
+		app.Hr(),
+		app.H2().Class("list-item_header no-margin-top").
 			Body(
-				app.Div().Body(
-					app.H2().Class("no-margin-top").Body(
-						app.Text(inv.Name),
-					),
-					app.H4().Class("text-small").Body(
-						app.Text("Chapter "+string(inv.Chapter)),
-					),
-					app.H5().Class("clickable").Body(
-						statusUI,
+				app.Div().Class("list-item_header_main no-margin-top").Body(
+					app.Text(inv.Name),
+					app.H5().Body(
+						app.Text("Chapter "+inv.Chapter),
+						app.Br(),
+						app.Div().Class("list-item_status").Body(statusUI),
+						app.Br(),
 					),
 				),
-				app.Div().Class("list-item_sub_section text-small").Body(
+				app.Div().Class("list-item_image_container").Body(
+					app.Img().Class("list-item_image").Src(PLACEHOLDER_IMAGE),
+				),
+				app.Div().Class("list-item_header_sub text-small").Body(
 					app.H3().Class("no-margin-top").Body(app.Text("Photos")),
-					app.Dl().Class("list-item_sub").Body(
+					app.Dl().Class("list-item_header_sub_item").Body(
 						app.Range(inv.Photos).Slice(func(i int) app.UI {
 							photo, err := GetPhoto(inv.Photos[i].ID)
 							if err != nil {
 								return nil
 							}
-							return renderInventionPhoto(&photo)
+							return renderInventionPhotos(&photo)
 						}),
 					),
 					app.H3().Class("no-margin-top").Body(app.Text("Recipe")),
-					app.Dl().Class("list-item_sub").Body(
+					app.Dl().Class("list-item_header_sub_item").Body(
 						app.Range(inv.Recipe).Slice(func(i int) app.UI {
 							return renderInventionRecipeItem(inv.Recipe[i])
 						}),
@@ -71,14 +73,14 @@ func renderInvention(inv *Invention, userData *data.UserData) app.UI {
 				),
 			),
 		app.Br(),
+		app.Br(),
 		app.Div().Class("list-item_description").Body(
 			app.Text(inv.Description),
 		),
-		app.Hr(),
 	)
 }
 
-func renderInventionPhoto(p *Photo) app.UI {
+func renderInventionPhotos(p *Photo) app.UI {
 	class := GetUserData().GetPhotoStatus(p).ToClass()
 	return app.Dd().Body(
 		app.A().Class("list-item_sub_item clickable "+class).Body(

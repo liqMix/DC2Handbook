@@ -103,10 +103,28 @@ body {
 }
 
 .list-item_header {
-  display: flex;
-  align-items: baseline;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr;
+}
+
+.list-item_header_main {
+}
+
+
+.list-item_status {
+  float: left;
+}
+
+.list-item_image_container {
+  margin-top: 5rem;
+}
+
+.list-item_image {
+  width: 35rem;
+  border: var(--primary-color);
+  border-width: 7px;
+  border-style: solid;
 }
 
 .list-item_descripton {
@@ -117,15 +135,19 @@ body {
   text-align: right;
 }
 
-.list-item_sub_section {
+.list-item_header_sub {
   text-align: right;
   text-transform: uppercase;
 }
 
-.list-item_sub_item {
+.list-item_header_sub_item {
   border: 2em;
 }
 
+.list-item_header_icon {
+  font-size: 2rem;
+  justify-self: right;
+}
 .photo-taken {
   cursor: pointer;
   display: inline-block;
@@ -143,7 +165,9 @@ body {
 .sub-menu_link-item.vignette {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
 }
-
+.sub-menu_select > option {
+  text-align: center;
+}
 select {
   appearance: none;
   background-color: darkgrey;
@@ -266,21 +290,21 @@ select {
 }
 
 .error {
-  color: #f06372 !important;
+  color: #f06372;
 }
 
 .warn {
-  color: yellow !important;
+  color: yellow;
 }
 
 .moderate-warn {
-  color: lightyellow !important;
+  color: lightyellow;
 }
 
 .success {
-  color: lightgreen !important;
+  color: lightgreen;
 }
 
 .deemphasize {
-  color: grey !important
+  color: grey;
 }

@@ -24,6 +24,9 @@ func renderItem(i Item) app.UI {
 		app.H3().Body(app.Text(i.Name)),
 		app.Br(),
 		app.Text(i.Value+" Gilda"),
+		app.Div().Class("list-item_image_container").Body(
+			app.Img().Class("list-item_image").Src(PLACEHOLDER_IMAGE),
+		),
 		app.Hr(),
 	)
 }

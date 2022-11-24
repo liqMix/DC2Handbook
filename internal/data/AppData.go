@@ -10,11 +10,9 @@ import (
 	"github.com/maxence-charriere/go-app/v9/pkg/app"
 )
 
-const DEFAULT_DATA_DIR = "/web/json/"
-const CHAPTERS_PATH = DEFAULT_DATA_DIR + "chapters.json"
-const ITEMS_PATH = DEFAULT_DATA_DIR + "items.json"
-const PHOTOS_PATH = DEFAULT_DATA_DIR + "photos.json"
-const INVENTIONS_PATH = DEFAULT_DATA_DIR + "inventions.json"
+const IMAGE_DIR = "/web/img/"
+const PLACEHOLDER_IMAGE = IMAGE_DIR + "placeholder.png"
+const JSON_DIR = "/web/json/"
 
 var appData *AppData = nil
 
@@ -41,7 +39,7 @@ func InitAppData(ctx *app.Context) {
 }
 
 func (ad *AppData) initChapters() {
-	resp, err := http.Get(ad.host + CHAPTERS_PATH)
+	resp, err := http.Get(ad.host + JSON_DIR + "chapters.json")
 	if err != nil {
 		app.Log(err)
 		return
@@ -56,7 +54,7 @@ func (ad *AppData) initChapters() {
 }
 
 func (ad *AppData) initItems() {
-	resp, err := http.Get(ad.host + ITEMS_PATH)
+	resp, err := http.Get(ad.host + JSON_DIR + "items.json")
 	if err != nil {
 		app.Log(err)
 		return
@@ -71,7 +69,7 @@ func (ad *AppData) initItems() {
 }
 
 func (ad *AppData) initPhotos() {
-	resp, err := http.Get(ad.host + PHOTOS_PATH)
+	resp, err := http.Get(ad.host + JSON_DIR + "photos.json")
 	if err != nil {
 		app.Log(err)
 		return
@@ -86,7 +84,7 @@ func (ad *AppData) initPhotos() {
 }
 
 func (ad *AppData) initInventions() {
-	resp, err := http.Get(ad.host + INVENTIONS_PATH)
+	resp, err := http.Get(ad.host + JSON_DIR + "inventions.json")
 	if err != nil {
 		app.Log(err)
 		return

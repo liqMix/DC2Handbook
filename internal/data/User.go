@@ -140,13 +140,16 @@ func (ud *UserData) save() {
 }
 
 func fetchUserData(ctx *app.Context) *UserData {
-	var userData = &UserData{
-		Photos:     make(map[string]bool),
-		Inventions: make(map[string]bool),
-	}
+	var userData = &UserData{}
 	var data string
 	(*ctx).LocalStorage().Get(LOCAL_STORAGE_KEY, &data)
 	json.Unmarshal([]byte(data), userData)
 	userData.context = ctx
+	if userData.Photos == nil {
+		userData.Photos = make(map[string]bool)
+	}
+	if userData.Inventions == nil {
+		userData.Inventions = make(map[string]bool)
+	}
 	return userData
 }
